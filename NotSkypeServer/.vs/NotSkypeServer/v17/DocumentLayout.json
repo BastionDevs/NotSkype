@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\skalf\\source\\repos\\NotSkypeServer\\",
+  "WorkspaceRootPath": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|c:\\users\\skalf\\source\\repos\\notskypeserver\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|c:\\users\\skalf\\desktop\\aedan\\git\\notskype\\notskypeserver\\updatecenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|solutionrelative:updatecenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\usermgmt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|solutionrelative:usermgmt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|C:\\Users\\skalf\\source\\repos\\NotSkypeServer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,27 +34,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\skalf\\source\\repos\\NotSkypeServer\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\skalf\\source\\repos\\NotSkypeServer\\Form1.cs",
+              "ToolTip": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAbAAAA",
+              "ViewState": "AQIAAAoAAAAAAAAAAAApwCIAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T11:21:27.218Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\skalf\\source\\repos\\NotSkypeServer\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\skalf\\source\\repos\\NotSkypeServer\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-27T10:39:45.931Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserMgmt.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\UserMgmt.cs",
+              "RelativeDocumentMoniker": "UserMgmt.cs",
+              "ToolTip": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\UserMgmt.cs [Design]",
+              "RelativeToolTip": "UserMgmt.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T09:57:00.219Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateCenter.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\UpdateCenter.cs",
+              "RelativeDocumentMoniker": "UpdateCenter.cs",
+              "ToolTip": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\UpdateCenter.cs [Design]",
+              "RelativeToolTip": "UpdateCenter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T10:22:08.955Z",
               "EditorCaption": " [Design]"
             }
           ]

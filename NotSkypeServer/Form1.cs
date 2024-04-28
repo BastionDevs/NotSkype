@@ -20,5 +20,19 @@ namespace NotSkypeServer
         {
 
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new UserMgmt().ShowDialog();
+            this.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new UpdateCenter().ShowDialog();
+            this.Show();
+        }
     }
 }

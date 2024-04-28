@@ -1,0 +1,11 @@
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\bin\Debug\NotSkypeServer.exe
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\bin\Debug\NotSkypeServer.pdb
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.csproj.AssemblyReference.cache
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.Form1.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.Properties.Resources.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.csproj.GenerateResource.cache
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.csproj.CoreCompileInputs.cache
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.exe
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.pdb
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.UpdateCenter.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.UserMgmt.resources

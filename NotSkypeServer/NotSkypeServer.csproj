@@ -43,6 +43,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UpdateCenter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCenter.Designer.cs">
+      <DependentUpon>UpdateCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMgmt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMgmt.Designer.cs">
+      <DependentUpon>UserMgmt.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -51,6 +63,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UpdateCenter.resx">
+      <DependentUpon>UpdateCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMgmt.resx">
+      <DependentUpon>UserMgmt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
