@@ -9,3 +9,4 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServe
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.pdb
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.UpdateCenter.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.UserMgmt.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeServer\obj\Debug\NotSkypeServer.ServerOverview.resources

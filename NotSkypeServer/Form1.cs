@@ -34,5 +34,12 @@ namespace NotSkypeServer
             new UpdateCenter().ShowDialog();
             this.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new ServerOverview().ShowDialog();
+            this.Show();
+        }
     }
 }
