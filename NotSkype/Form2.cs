@@ -12,9 +12,11 @@ namespace NotSkype
     public partial class Form2 : Form
     {
         string placeholdertext;
+        string username;
         public Form2(string text)
         {
             InitializeComponent();
+            username = text;
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -58,6 +60,17 @@ namespace NotSkype
         private void Quit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SendToServer("AUTH LOGIN " + username + " " + textBox1.Text);
+        }
+
+        private void SendToServer(string cmdstring)
+        {
+            MessageBox.Show("TCP Server Not Configured!");
+            MessageBox.Show("[DEBUG] " + cmdstring);
         }
     }
 }

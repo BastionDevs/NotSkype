@@ -11,7 +11,7 @@ namespace NotSkypeTCPServer
         {
             if (args.Length < 1) { Console.WriteLine("No arguments passed!"); Console.ReadLine(); Environment.Exit(1); }
             Console.WriteLine("NotSkype TCP Server");
-            Console.WriteLine("Loggin");
+            Console.WriteLine("Getting configuration file...");
         }
     }
 }
