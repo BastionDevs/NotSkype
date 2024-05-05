@@ -10,3 +10,4 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeTCPServer\obj\Debug\NotSkypeTC
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeTCPServer\obj\Debug\NotSkypeTCPServer.csproj.CoreCompileInputs.cache
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeTCPServer\obj\Debug\NotSkypeTCPServer.exe
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeTCPServer\obj\Debug\NotSkypeTCPServer.pdb
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeTCPServer\bin\Debug\NotSkypeTCPServer.exe.config

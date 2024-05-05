@@ -15,7 +15,7 @@
       "RelativeMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|c:\\users\\skalf\\desktop\\aedan\\git\\notskype\\notskypeserver\\updatecenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\updatecenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{2DB4F0B1-6F4C-4B0C-8A59-9BE2EBC15217}|NotSkypeServer.csproj|solutionrelative:updatecenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -46,8 +46,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAnwCgAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T11:21:27.218Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-27T11:21:27.218Z"
             },
             {
               "$type": "Document",
@@ -58,8 +57,7 @@
               "ToolTip": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T10:39:45.931Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-27T10:39:45.931Z"
             },
             {
               "$type": "Document",
@@ -70,8 +68,7 @@
               "ToolTip": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\UserMgmt.cs [Design]",
               "RelativeToolTip": "UserMgmt.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T09:57:00.219Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-28T09:57:00.219Z"
             },
             {
               "$type": "Document",
@@ -82,8 +79,7 @@
               "ToolTip": "C:\\Users\\skalf\\Desktop\\Aedan\\Git\\NotSkype\\NotSkypeServer\\UpdateCenter.cs [Design]",
               "RelativeToolTip": "UpdateCenter.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T10:22:08.955Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-04-28T10:22:08.955Z"
             },
             {
               "$type": "Document",
