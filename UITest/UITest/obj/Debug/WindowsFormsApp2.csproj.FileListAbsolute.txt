@@ -1,0 +1,9 @@
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\WindowsFormsApp2\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
