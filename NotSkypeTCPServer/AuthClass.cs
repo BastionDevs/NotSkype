@@ -8,12 +8,12 @@ namespace NotSkypeTCPServer
 {
     public class AuthClass
     {
-        static void Login(string uname, string pwd, string code)
+        public static void Login(string uname, string pwd, string code)
         {
-
+            
         }
 
-        static void Register(string uname, string pwd, string email)
+        public static void Register(string uname, string pwd, string email)
         {
 
         }
