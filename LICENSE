@@ -1,0 +1,28 @@
+Bastion General Licensing Policy
+Software License Policy, v2.53
+
+1. Use of the package
+Any/Everyone is allowed to use the software in this package for LEGAL purposes,
+NOT INCLUDING ToS or EULA of the intended platform (OS, Language, Usage, Etc).
+The package should not be used with malicious intent. Consult the Author(s) of the
+Package or the Author(s) of the Target/Intended Platform to enquire on proper use.
+Credit the package Author(s)
+
+2. Distribution of the package
+It is a must to credit the Author(s) when Distributing this package, and usage of the
+Package in a Commercial setting (any situation which allows the Distributor to earn),
+Including for Educational Purposes, is allowed, but the package Author(s) should be
+Consulted beforehand.
+
+3. Using the Package in another project (Repackaging)
+The Package may be used in an open source project when the Author(s) get(s) credited.
+The latest version should be used as much as possible, to reduce the amount of
+Possible bugs.
+
+4. Forking the Package 
+Forking is allowed if you credit the Author(s) and the original Package source (eg.
+GitHub Repository URL) must be CLEARLY STATED in a README or About.
+
+5. Contributing to the Project/Package
+Read the Project/Package's CONTRIBUTING(.md) file for instructions/information.
+Contact the Author(s) for more information.
