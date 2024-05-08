@@ -1,4 +1,6 @@
-﻿using System;
+﻿using NotSkypeTCPServer;
+using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -8,6 +10,7 @@ class TCPServer
 {
     private static bool isRunning = true;
     private static TcpListener server;
+    private static string maincfg = Directory.GetCurrentDirectory() + @"\main.cfg";
 
     static void Main(string[] args)
     {
@@ -26,7 +29,7 @@ class TCPServer
         try
         {
             // Set the TcpListener on port 13000.
-            int port = 13000;
+            int port = int.Parse(Config.ReadINI(maincfg, "serverport", "main"));
             IPAddress localAddr = IPAddress.Parse("127.0.0.1");
 
             // Create and start the TcpListener.
