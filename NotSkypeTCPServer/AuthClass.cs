@@ -13,6 +13,7 @@ namespace NotSkypeTCPServer
         
         public static bool Login(string uname, string pwd, string code)
         {
+            Console.WriteLine("User " + uname + " is trying to log in.");
             Console.WriteLine("Checking credentials for user " + uname + ".");
             Console.WriteLine("Reading file at " + userconfigini + "...");
             if (Config.ReadINI(userconfigini, uname+"userpassword", "userdb") == pwd)
@@ -29,9 +30,13 @@ namespace NotSkypeTCPServer
             }
         }
 
-        public static void Register(string uname, string pwd, string email)
+        public static void Register(string uname, string pwd)
         {
-           
+            Console.WriteLine("Setting credentials for user " + uname + ".");
+            Console.WriteLine("Writing to file at " + userconfigini + "...");
+            Config.WriteINI(userconfigini, uname + "userpassword", pwd, "userdb");
+            Console.WriteLine();
+            Console.WriteLine("Username and Password has been written, user " + uname + " has been registered.");
         }
 
         // UserInfo("mode", new string[] {"arg1", "arg2"});
