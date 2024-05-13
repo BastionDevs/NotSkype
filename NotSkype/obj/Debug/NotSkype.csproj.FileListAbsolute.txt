@@ -28,3 +28,4 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.Gen
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.CoreCompileInputs.cache
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.exe
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.pdb
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.Form3.resources
