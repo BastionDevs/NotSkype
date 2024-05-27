@@ -29,3 +29,4 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.Cor
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.exe
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.pdb
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.Form3.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.IMWindow.resources

@@ -83,5 +83,15 @@ namespace NotSkype
         {
             Application.Exit();
         }
+
+        private void menuItem8_Click(object sender, EventArgs e)
+        {
+            new Form3().ShowDialog();
+        }
+
+        private void menuItem9_Click(object sender, EventArgs e)
+        {
+            new IMWindow().ShowDialog();
+        }
     }
 }

@@ -57,6 +57,8 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuItem8 = new System.Windows.Forms.MenuItem();
+            this.menuItem9 = new System.Windows.Forms.MenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -184,7 +186,9 @@
             this.Skype.Index = 0;
             this.Skype.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.Close,
-            this.Quit});
+            this.Quit,
+            this.menuItem8,
+            this.menuItem9});
             this.Skype.Text = "Skype";
             // 
             // Close
@@ -295,6 +299,18 @@
             this.toolStripMenuItem2.Text = "Quit NotSkype";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
+            // menuItem8
+            // 
+            this.menuItem8.Index = 2;
+            this.menuItem8.Text = "open form3";
+            this.menuItem8.Click += new System.EventHandler(this.menuItem8_Click);
+            // 
+            // menuItem9
+            // 
+            this.menuItem9.Index = 3;
+            this.menuItem9.Text = "open imwindow";
+            this.menuItem9.Click += new System.EventHandler(this.menuItem9_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,6 +364,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.MenuItem menuItem8;
+        private System.Windows.Forms.MenuItem menuItem9;
     }
 }
 
