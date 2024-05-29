@@ -30,6 +30,7 @@
         {
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelChatMsgs = new System.Windows.Forms.Panel();
+            this.textBoxChatLog = new System.Windows.Forms.TextBox();
             this.textBoxChatMsg = new System.Windows.Forms.TextBox();
             this.buttonSendChat = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
@@ -37,7 +38,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.textBoxChatLog = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panelChatMsgs.SuspendLayout();
@@ -62,6 +62,17 @@
             this.panelChatMsgs.Name = "panelChatMsgs";
             this.panelChatMsgs.Size = new System.Drawing.Size(484, 279);
             this.panelChatMsgs.TabIndex = 3;
+            // 
+            // textBoxChatLog
+            // 
+            this.textBoxChatLog.BackColor = System.Drawing.SystemColors.Window;
+            this.textBoxChatLog.Location = new System.Drawing.Point(3, 3);
+            this.textBoxChatLog.Multiline = true;
+            this.textBoxChatLog.Name = "textBoxChatLog";
+            this.textBoxChatLog.ReadOnly = true;
+            this.textBoxChatLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxChatLog.Size = new System.Drawing.Size(478, 273);
+            this.textBoxChatLog.TabIndex = 0;
             // 
             // textBoxChatMsg
             // 
@@ -136,17 +147,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // textBoxChatLog
-            // 
-            this.textBoxChatLog.BackColor = System.Drawing.SystemColors.Window;
-            this.textBoxChatLog.Location = new System.Drawing.Point(3, 3);
-            this.textBoxChatLog.Multiline = true;
-            this.textBoxChatLog.Name = "textBoxChatLog";
-            this.textBoxChatLog.ReadOnly = true;
-            this.textBoxChatLog.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxChatLog.Size = new System.Drawing.Size(478, 273);
-            this.textBoxChatLog.TabIndex = 0;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(397, 476);
@@ -174,6 +174,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Name = "IMWindow";
             this.Text = "NotSkype - dmname";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IMWindow_FormClosing);
             this.Load += new System.EventHandler(this.IMWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panelChatMsgs.ResumeLayout(false);

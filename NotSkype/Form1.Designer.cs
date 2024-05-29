@@ -43,6 +43,8 @@
             this.Skype = new System.Windows.Forms.MenuItem();
             this.Close = new System.Windows.Forms.MenuItem();
             this.Quit = new System.Windows.Forms.MenuItem();
+            this.menuItem8 = new System.Windows.Forms.MenuItem();
+            this.menuItem9 = new System.Windows.Forms.MenuItem();
             this.Tools = new System.Windows.Forms.MenuItem();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
@@ -57,8 +59,6 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuItem8 = new System.Windows.Forms.MenuItem();
-            this.menuItem9 = new System.Windows.Forms.MenuItem();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +82,7 @@
             // 
             // linkLabel1
             // 
+            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -96,6 +97,7 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(150, 149);
             this.button1.Name = "button1";
@@ -107,25 +109,28 @@
             // 
             // textBox1
             // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(150, 118);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(350, 22);
             this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "Email, phone, or NotSkype name";
+            this.textBox1.Text = "Email, phone, or Skype name";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(196, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 25);
+            this.label3.Size = new System.Drawing.Size(282, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "with NotSkype or Thunder account";
+            this.label3.Text = "with Skype or Microsoft account";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(286, 7);
@@ -146,21 +151,23 @@
             // 
             // linkLabel3
             // 
+            this.linkLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel3.AutoSize = true;
             this.linkLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.linkLabel3.LinkColor = System.Drawing.Color.Blue;
-            this.linkLabel3.Location = new System.Drawing.Point(571, 6);
+            this.linkLabel3.Location = new System.Drawing.Point(546, 6);
             this.linkLabel3.Name = "linkLabel3";
-            this.linkLabel3.Size = new System.Drawing.Size(136, 21);
+            this.linkLabel3.Size = new System.Drawing.Size(161, 21);
             this.linkLabel3.TabIndex = 4;
             this.linkLabel3.TabStop = true;
-            this.linkLabel3.Text = "Sign in with Ely.by";
+            this.linkLabel3.Text = "Sign in with Facebook";
             this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.linkLabel3.VisitedLinkColor = System.Drawing.Color.Blue;
             // 
             // linkLabel2
             // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -202,6 +209,18 @@
             this.Quit.Index = 1;
             this.Quit.Text = "Quit";
             this.Quit.Click += new System.EventHandler(this.Quit_Click);
+            // 
+            // menuItem8
+            // 
+            this.menuItem8.Index = 2;
+            this.menuItem8.Text = "open form3";
+            this.menuItem8.Click += new System.EventHandler(this.menuItem8_Click);
+            // 
+            // menuItem9
+            // 
+            this.menuItem9.Index = 3;
+            this.menuItem9.Text = "open imwindow";
+            this.menuItem9.Click += new System.EventHandler(this.menuItem9_Click);
             // 
             // Tools
             // 
@@ -298,18 +317,6 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
             this.toolStripMenuItem2.Text = "Quit NotSkype";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
-            // 
-            // menuItem8
-            // 
-            this.menuItem8.Index = 2;
-            this.menuItem8.Text = "open form3";
-            this.menuItem8.Click += new System.EventHandler(this.menuItem8_Click);
-            // 
-            // menuItem9
-            // 
-            this.menuItem9.Index = 3;
-            this.menuItem9.Text = "open imwindow";
-            this.menuItem9.Click += new System.EventHandler(this.menuItem9_Click);
             // 
             // Form1
             // 

@@ -8,10 +8,10 @@ namespace NotSkype
     internal class PythonIntegration
     {
 
-        public static bool ReceiveMessages()
+        public static bool ReceiveMessages(string username, string password)
         {
             bool success = false;
-            //code
+            //code- execute python
 
             if (success) {
                 return true;
@@ -22,10 +22,10 @@ namespace NotSkype
 
         }
 
-        public static bool SendMessages()
+        public static bool SendMessages(string username, string password, string message)
         {
             bool success = false;
-            //code
+            //code- execute python
             
             if (success)
             {

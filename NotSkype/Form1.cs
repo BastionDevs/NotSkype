@@ -29,7 +29,7 @@ namespace NotSkype
             textBox1.GotFocus += RemoveText;
             textBox1.LostFocus += AddText;
             
-            placeholdertext = "Email, phone, or NotSkype name";
+            placeholdertext = "Email, phone, or Skype name";
 
             button1.Focus();
         }
