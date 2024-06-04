@@ -101,7 +101,8 @@ namespace NotSkype
 
         private void buttonSendChat_Click(object sender, EventArgs e)
         {
-            textBoxChatLog.Text += "\r\n <" + senderName + "> " + textBoxChatMsg.Text;
+            AddMessage(textBoxChatMsg.Text, senderName);
+            textBoxChatMsg.Text = string.Empty;
 
             //send chat to person
         }
@@ -130,6 +131,11 @@ namespace NotSkype
                 _listenerThread.Join();
             }
             base.OnFormClosing(e);
+        }
+
+        public void AddMessage(string message, string username)
+        {
+            textBoxChatLog.Text += "\r\n <" + username + "> " + message;
         }
     }
 }
