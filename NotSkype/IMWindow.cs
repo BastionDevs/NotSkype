@@ -16,12 +16,18 @@ namespace NotSkype
         private HttpListener _listener;
         private Thread _listenerThread;
 
+        private HttpListener _listener2;
+        private Thread _listenerThread2;
+
         string senderName = "";
+        string recepientName = "";
+        string displayName = "";
 
         public IMWindow()
         {
             InitializeComponent();
             StartHttpListener();
+            StartHttpListener2();
         }
 
         private void StartHttpListener()
@@ -32,6 +38,16 @@ namespace NotSkype
             _listenerThread = new Thread(new ThreadStart(ListenForRequests));
             _listenerThread.IsBackground = true;
             _listenerThread.Start();
+        }
+
+        private void StartHttpListener2()
+        {
+            _listener2 = new HttpListener();
+            _listener2.Prefixes.Add("http://localhost:25161/displayname/");
+            _listener2.Start();
+            _listenerThread2 = new Thread(new ThreadStart(ListenForRequests2));
+            _listenerThread2.IsBackground = true;
+            _listenerThread2.Start();
         }
 
         private void ListenForRequests()
@@ -63,6 +79,35 @@ namespace NotSkype
             }
         }
 
+        private void ListenForRequests2()
+        {
+            while (_listener2.IsListening)
+            {
+                try
+                {
+                    var context = _listener2.GetContext();
+                    if (context.Request.HttpMethod == "POST")
+                    {
+                        HandlePostRequest2(context);
+                    }
+                    else
+                    {
+                        context.Response.StatusCode = (int)HttpStatusCode.MethodNotAllowed;
+                        context.Response.Close();
+                    }
+                }
+                catch (HttpListenerException)
+                {
+                    // Listener was stopped, ignore exception
+                }
+                catch (Exception ex)
+                {
+                    // Handle any other exceptions
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
+        }
+
         private void HandlePostRequest(HttpListenerContext context)
         {
             string requestBody;
@@ -72,7 +117,35 @@ namespace NotSkype
             }
 
             // Here you can process the request body as needed
-            Console.WriteLine(requestBody);
+            ////Console.WriteLine(requestBody);
+
+            ////MessageBox.Show(requestBody);
+
+            AddMessage(requestBody, displayName);
+
+            // Send a response
+            var responseString = "Data received";
+            var buffer = Encoding.UTF8.GetBytes(responseString);
+            context.Response.ContentLength64 = buffer.Length;
+            context.Response.OutputStream.Write(buffer, 0, buffer.Length);
+            context.Response.OutputStream.Close();
+        }
+
+        //displayname
+        private void HandlePostRequest2(HttpListenerContext context)
+        {
+            string requestBody;
+            using (var reader = new System.IO.StreamReader(context.Request.InputStream, context.Request.ContentEncoding))
+            {
+                requestBody = reader.ReadToEnd();
+            }
+
+            // Here you can process the request body as needed
+            ////Console.WriteLine(requestBody);
+
+            ////MessageBox.Show(requestBody);
+
+            displayName = requestBody;
 
             // Send a response
             var responseString = "Data received";
@@ -130,7 +203,15 @@ namespace NotSkype
             {
                 _listenerThread.Join();
             }
-            base.OnFormClosing(e);
+
+            if (_listener2 != null && _listener2.IsListening)
+            {
+                _listener2.Stop();
+            }
+            if (_listenerThread2 != null && _listenerThread2.IsAlive)
+            {
+                _listenerThread2.Join();
+            }
         }
 
         public void AddMessage(string message, string username)
