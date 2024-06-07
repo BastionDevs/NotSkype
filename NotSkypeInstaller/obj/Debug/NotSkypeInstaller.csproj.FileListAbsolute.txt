@@ -2,8 +2,11 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\bin\Debug\NotSkypeIn
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\bin\Debug\NotSkypeInstaller.pdb
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.csproj.AssemblyReference.cache
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.Form1.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.InstallPyWin7.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.Properties.Resources.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.csproj.GenerateResource.cache
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.csproj.CoreCompileInputs.cache
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.exe
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.pdb
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.InstallPyWinXP.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.InstallPyWin10.resources

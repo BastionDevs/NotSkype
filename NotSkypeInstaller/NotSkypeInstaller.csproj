@@ -49,10 +49,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="InstallPyWin10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallPyWin10.Designer.cs">
+      <DependentUpon>InstallPyWin10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallPyWin7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallPyWin7.Designer.cs">
+      <DependentUpon>InstallPyWin7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallPyWinXP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InstallPyWinXP.Designer.cs">
+      <DependentUpon>InstallPyWinXP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallPyWin10.resx">
+      <DependentUpon>InstallPyWin10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallPyWin7.resx">
+      <DependentUpon>InstallPyWin7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InstallPyWinXP.resx">
+      <DependentUpon>InstallPyWinXP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,6 +103,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SkypeImg2003-Crop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Windows_XP_Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Python_logo_and_wordmark.svg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -183,6 +183,7 @@ namespace NotSkype
         private void IMWindow_Load(object sender, EventArgs e)
         {
             textBoxChatLog.ForeColor = Color.Black;
+            this.Text = recepientName;
         }
 
         private void textBoxChatMsg_KeyDown(object sender, KeyEventArgs e)

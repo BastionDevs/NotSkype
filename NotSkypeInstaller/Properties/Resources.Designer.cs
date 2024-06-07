@@ -63,9 +63,39 @@ namespace NotSkypeInstaller.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Microsoft_Windows_29 {
+            get {
+                object obj = ResourceManager.GetObject("Microsoft_Windows_29", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Python_logo_and_wordmark_svg {
+            get {
+                object obj = ResourceManager.GetObject("Python_logo_and_wordmark_svg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap SkypeImg2003_Crop {
             get {
                 object obj = ResourceManager.GetObject("SkypeImg2003-Crop", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Windows_XP_Logo {
+            get {
+                object obj = ResourceManager.GetObject("Windows_XP_Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
