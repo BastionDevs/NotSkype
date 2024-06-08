@@ -7,10 +7,9 @@ The NotSkype Server Software has been deprecated since NotSkype now connects to 
 You may still access the projects in the _Old_ folder.  
 
 # Contributors
-![developers](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/devs.png) 
+![developers](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/devs.png)  
 [ChatGPT](https://chat.openai.com)   
 
 # Credits
-[michaelschnyder/SkypeClient](https://github.com/michaelschnyder/SkypeClient) - The very library that lets NotSkype connect to Microsoft!  
-[Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
-[CefSharp](https://github.com/cefsharp/CefSharp/)
+[SkPy](https://github.com/Terrance/SkPy)  
+[Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)  
