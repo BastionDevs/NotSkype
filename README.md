@@ -7,10 +7,8 @@ The NotSkype Server Software has been deprecated since NotSkype now connects to 
 You may still access the projects in the _Old_ folder.  
 
 # Contributors
-nlite (Discord)  
-abuyine (Discord)  
-healer7074 (Discord)  
-ItsAndrewDev (```_windows7_``` on Discord)  
+![developers](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/devs.png) 
+[ChatGPT](https://chat.openai.com)   
 
 # Credits
 [michaelschnyder/SkypeClient](https://github.com/michaelschnyder/SkypeClient) - The very library that lets NotSkype connect to Microsoft!  

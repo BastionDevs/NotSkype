@@ -7,16 +7,18 @@ using TinyINIController;
 
 namespace NotSkype
 {
-    internal class Config
+    class Config
     {
 
-        static string ProjVer;
-        static string ProjName = "NotSkype";
-        static string InstallPath;
-        static string UtilsPath;
+        public static string ProjVer;
+        public static string ProjName = "NotSkype";
+        public static string InstallPath;
+        public static string UtilsPath;
 
-        static int pythonport = 25162;
-        static int clientport = 25161;
+        public static string PythonFlaskPort;
+        public static string ClientPort;
+
+        public static string FirstBoot;
 
         static void GetConfig()
         {
@@ -25,7 +27,10 @@ namespace NotSkype
             InstallPath = ConfigFile.Read("installdir", "swinfo");
             UtilsPath = ConfigFile.Read("utilsdir", "swinfo");
 
+            PythonFlaskPort = ConfigFile.Read("pyport", "servercfg");
+            ClientPort = ConfigFile.Read("clientport", "servercfg");
 
+            FirstBoot = ConfigFile.Read("firstboot", "appcfg");
         }
 
     }

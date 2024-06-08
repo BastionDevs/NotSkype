@@ -23,6 +23,7 @@ namespace NotSkype
         string senderName = "";
         string recepientName = "";
         string displayName = "";
+        string displayNameSelf = "";
 
         public IMWindow(string recepient, string sender)
         {
@@ -34,7 +35,7 @@ namespace NotSkype
 
             try
             {
-                string url = "http://localhost:25162/getdisplayname";
+                string url = "http://localhost:"+Config.PythonFlaskPort+"/getdisplayname";
                 string postData = recepientName;
                 string contentType = "application/x-www-form-urlencoded";
 
@@ -45,12 +46,64 @@ namespace NotSkype
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
+
+            label6.Text = recepientName;
+
+            // URL for the GET request
+            string url2 = "http://localhost:"+Config.PythonFlaskPort+"/get_current_user_displayname";
+
+            // Create a request object
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url2);
+            request.Method = "GET"; // Specify the GET method
+
+            try
+            {
+                // Get the response from the server
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    // Check if the response status is OK (200)
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        // Read the response stream
+                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                        {
+                            string responseText = reader.ReadToEnd();
+                            Console.WriteLine("Response: " + responseText);
+                            displayNameSelf = responseText;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: " + response.StatusCode);
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                // Handle any exceptions that occur during the request
+                if (ex.Response != null)
+                {
+                    using (HttpWebResponse errorResponse = (HttpWebResponse)ex.Response)
+                    {
+                        Console.WriteLine("Error: " + errorResponse.StatusCode);
+                        using (StreamReader reader = new StreamReader(errorResponse.GetResponseStream()))
+                        {
+                            string errorText = reader.ReadToEnd();
+                            Console.WriteLine("Error Details: " + errorText);
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("WebException: " + ex.Message);
+                }
+            }
         }
 
         private void StartHttpListener()
         {
             _listener = new HttpListener();
-            _listener.Prefixes.Add("http://localhost:25161/");
+            _listener.Prefixes.Add("http://localhost:"+Config.ClientPort+"/");
             _listener.Start();
             _listenerThread = new Thread(new ThreadStart(ListenForRequests));
             _listenerThread.IsBackground = true;
@@ -60,7 +113,7 @@ namespace NotSkype
         private void StartHttpListener2()
         {
             _listener2 = new HttpListener();
-            _listener2.Prefixes.Add("http://localhost:25161/displayname/");
+            _listener2.Prefixes.Add("http://localhost:"+Config.ClientPort+"/othermsg/");
             _listener2.Start();
             _listenerThread2 = new Thread(new ThreadStart(ListenForRequests2));
             _listenerThread2.IsBackground = true;
@@ -148,7 +201,7 @@ namespace NotSkype
             context.Response.OutputStream.Close();
         }
 
-        //displayname
+        //othermsg
         private void HandlePostRequest2(HttpListenerContext context)
         {
             string requestBody;
@@ -162,7 +215,7 @@ namespace NotSkype
 
             ////MessageBox.Show(requestBody);
 
-            displayName = requestBody;
+            //parse and notif msg
 
             // Send a response
             var responseString = "Data received";
@@ -191,10 +244,80 @@ namespace NotSkype
 
         private void buttonSendChat_Click(object sender, EventArgs e)
         {
-            AddMessage(textBoxChatMsg.Text, senderName);
+            string msg = textBoxChatMsg.Text;
+            AddMessage(textBoxChatMsg.Text, displayNameSelf);
             textBoxChatMsg.Text = string.Empty;
 
             //send chat to person
+            SendMessageToUser(msg);
+        }
+
+        private void SendMessageToUser(string msg)
+        {
+            // URL for the POST request
+            string url = "http://localhost:"+Config.PythonFlaskPort+"/send_message";
+
+            // JSON data to send in the POST request
+            string postData = "{\"recipient\": "+recepientName+", \"message\": \""+msg+"\"}";
+
+            // Create a request object
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST"; // Specify the POST method
+            request.ContentType = "application/json"; // Set the Content-Type header
+
+            try
+            {
+                // Convert the JSON data to a byte array
+                byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+
+                // Set the ContentLength property of the WebRequest
+                request.ContentLength = byteArray.Length;
+
+                // Get the request stream and write the data to it
+                using (Stream dataStream = request.GetRequestStream())
+                {
+                    dataStream.Write(byteArray, 0, byteArray.Length);
+                }
+
+                // Get the response from the server
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                {
+                    // Check if the response status is OK (200)
+                    if (response.StatusCode == HttpStatusCode.OK)
+                    {
+                        // Read the response stream
+                        using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                        {
+                            string responseText = reader.ReadToEnd();
+                            Console.WriteLine("Response: " + responseText);
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Error: " + response.StatusCode);
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                // Handle any exceptions that occur during the request
+                if (ex.Response != null)
+                {
+                    using (HttpWebResponse errorResponse = (HttpWebResponse)ex.Response)
+                    {
+                        Console.WriteLine("Error: " + errorResponse.StatusCode);
+                        using (StreamReader reader = new StreamReader(errorResponse.GetResponseStream()))
+                        {
+                            string errorText = reader.ReadToEnd();
+                            Console.WriteLine("Error Details: " + errorText);
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("WebException: " + ex.Message);
+                }
+            }
         }
 
         private void IMWindow_Load(object sender, EventArgs e)

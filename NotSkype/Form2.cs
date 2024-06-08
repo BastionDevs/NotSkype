@@ -66,7 +66,10 @@ namespace NotSkype
         {
             PythonIntegration.Login(username, textBox1.Text);
             this.Hide();
+            PythonIntegration.Login(username, textBox1.Text);
             new Form3(username).ShowDialog();
+            PythonIntegration.StopServer();
+            Application.Exit();
         }
 
         private void SendToServer(string cmdstring)

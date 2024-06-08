@@ -103,9 +103,9 @@
             this.label6.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(73, 75);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 23);
+            this.label6.Size = new System.Drawing.Size(63, 23);
             this.label6.TabIndex = 11;
-            this.label6.Text = "status/about";
+            this.label6.Text = "uname";
             // 
             // label5
             // 
@@ -173,7 +173,7 @@
             this.Controls.Add(this.panelChatMsgs);
             this.Controls.Add(this.pictureBox2);
             this.Name = "IMWindow";
-            this.Text = "NotSkype - dmname";
+            this.Text = "NotSkype - ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IMWindow_FormClosing);
             this.Load += new System.EventHandler(this.IMWindow_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
