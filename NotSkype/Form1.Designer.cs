@@ -43,8 +43,6 @@
             this.Skype = new System.Windows.Forms.MenuItem();
             this.Close = new System.Windows.Forms.MenuItem();
             this.Quit = new System.Windows.Forms.MenuItem();
-            this.menuItem8 = new System.Windows.Forms.MenuItem();
-            this.menuItem9 = new System.Windows.Forms.MenuItem();
             this.Tools = new System.Windows.Forms.MenuItem();
             this.menuItem1 = new System.Windows.Forms.MenuItem();
             this.menuItem2 = new System.Windows.Forms.MenuItem();
@@ -193,9 +191,7 @@
             this.Skype.Index = 0;
             this.Skype.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.Close,
-            this.Quit,
-            this.menuItem8,
-            this.menuItem9});
+            this.Quit});
             this.Skype.Text = "Skype";
             // 
             // Close
@@ -209,18 +205,6 @@
             this.Quit.Index = 1;
             this.Quit.Text = "Quit";
             this.Quit.Click += new System.EventHandler(this.Quit_Click);
-            // 
-            // menuItem8
-            // 
-            this.menuItem8.Index = 2;
-            this.menuItem8.Text = "open form3";
-            this.menuItem8.Click += new System.EventHandler(this.menuItem8_Click);
-            // 
-            // menuItem9
-            // 
-            this.menuItem9.Index = 3;
-            this.menuItem9.Text = "open imwindow";
-            this.menuItem9.Click += new System.EventHandler(this.menuItem9_Click);
             // 
             // Tools
             // 
@@ -371,8 +355,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.MenuItem menuItem8;
-        private System.Windows.Forms.MenuItem menuItem9;
     }
 }
 

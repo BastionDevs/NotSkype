@@ -11,6 +11,9 @@ namespace NotSkype
         static string pythonport;
         static string os;
 
+        static string uname;
+        static string password;
+
         public static void InitPython(string path, string port, string winver) {
             pythonpath = path;
             pythonport = port;
@@ -28,32 +31,15 @@ namespace NotSkype
             }
         }
 
-        public static bool ReceiveMessages(string username, string password)
+        public static void Login(string username, string pwd)
         {
-            bool success = false;
-            //code- execute python
-
-            if (success) {
-                return true;
-            } else
-            {
-                return false;
-            }
-
+            uname = username;
+            password = pwd;
         }
 
-        public static bool SendMessages(string username, string password, string message)
+        public static void StartServer(string username, string password)
         {
-            bool success = false;
             //code- execute python
-            
-            if (success)
-            {
-                return true;
-            } else 
-            { 
-                return false; 
-            }
         }
 
     }

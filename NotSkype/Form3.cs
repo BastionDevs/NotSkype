@@ -11,9 +11,11 @@ namespace NotSkype
 {
     public partial class Form3 : Form
     {
-        public Form3()
+        string CurrentUname;
+        public Form3(string Username)
         {
             InitializeComponent();
+            CurrentUname = Username;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -24,6 +26,11 @@ namespace NotSkype
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new IMWindow(textBoxUsername.Text, CurrentUname).Show();
         }
     }
 }

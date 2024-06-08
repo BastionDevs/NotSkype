@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -23,11 +24,27 @@ namespace NotSkype
         string recepientName = "";
         string displayName = "";
 
-        public IMWindow()
+        public IMWindow(string recepient, string sender)
         {
             InitializeComponent();
             StartHttpListener();
             StartHttpListener2();
+            recepientName = recepient;
+            senderName = sender;
+
+            try
+            {
+                string url = "http://localhost:25162/getdisplayname";
+                string postData = recepientName;
+                string contentType = "application/x-www-form-urlencoded";
+
+                string responseBody = SendPostRequest(url, postData, contentType);
+                displayName = responseBody;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
         }
 
         private void StartHttpListener()
@@ -183,7 +200,7 @@ namespace NotSkype
         private void IMWindow_Load(object sender, EventArgs e)
         {
             textBoxChatLog.ForeColor = Color.Black;
-            this.Text = recepientName;
+            this.Text = "NotSkype - " + recepientName;
         }
 
         private void textBoxChatMsg_KeyDown(object sender, KeyEventArgs e)
@@ -218,6 +235,30 @@ namespace NotSkype
         public void AddMessage(string message, string username)
         {
             textBoxChatLog.Text += "\r\n <" + username + "> " + message;
+        }
+
+
+        static string SendPostRequest(string url, string postData, string contentType)
+        {
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "POST";
+            request.ContentType = contentType;
+
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+            request.ContentLength = byteArray.Length;
+
+            using (Stream dataStream = request.GetRequestStream())
+            {
+                dataStream.Write(byteArray, 0, byteArray.Length);
+            }
+
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            {
+                using (StreamReader reader = new StreamReader(response.GetResponseStream()))
+                {
+                    return reader.ReadToEnd();
+                }
+            }
         }
     }
 }
