@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -63,6 +64,39 @@ namespace NotSkypeInstaller
                 radioButtonSelfInstall.Checked = false;
                 radioButtonSkipPy.Checked = false;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!radioButtonSkipPy.Checked)
+            {
+                string arch;
+                if (System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE") == "AMD64") { arch = "x64"; } else { arch = "x86"; }
+
+                string url;
+                if (arch == "x64") { url = "https://raw.githubusercontent.com/adang1345/PythonWindows/master/3.8.19/python-3.8.19-amd64-full.exe"; } else { url = "https://raw.githubusercontent.com/adang1345/PythonWindows/master/3.8.19/python-3.8.19-full.exe"; }
+
+                string filename = @"C:\BastionSG\NotSkype\InstallTemp\pyinstall-3-8-19.exe";
+
+                DownloadUtils.DownloadFile(url, filename);
+                ExecuteAsAdmin(filename, "/passive InstallAllUsers=1 PrependPath=1");
+
+            }
+            else
+            {
+                //next form
+            }
+        }
+
+        public void ExecuteAsAdmin(string fileName, string args)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = fileName;
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+            proc.StartInfo.Arguments = args;
+            proc.Start();
+            proc.WaitForExit();
         }
     }
 }

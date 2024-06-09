@@ -11,7 +11,7 @@ On older systems, up-to-date Python installers are hard to come by. As NotSkype 
   
 * Install for me  
  * The NotSkype Installer will automatically install Python for you with the recommended options and Packages.  
- * Python will be installed _quietly_ for all users (if applicable) and added to _%PATH%_ (_.py_ to _%PATHEXT%_).  
+ * Python will be installed _passively_ for all users (if applicable) and added to _%PATH%_ (_.py_ to _%PATHEXT%_).  
   
 * Skip Python installation  
  * **NOTE: ** NotSkype requires Python to run. Please ensure that a Python runtime is installed and added to _%PATH%_ (either User or System).  

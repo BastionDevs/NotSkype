@@ -122,18 +122,6 @@ namespace NotSkype
             try
             {
                 process.Start();
-
-                // Read the standard output and error
-                string output = process.StandardOutput.ReadToEnd();
-                string error = process.StandardError.ReadToEnd();
-
-                process.WaitForExit();
-
-                // Print the output and error to the console
-                Console.WriteLine("Output:");
-                Console.WriteLine(output);
-                Console.WriteLine("Error:");
-                Console.WriteLine(error);
             }
             catch (Exception e)
             {

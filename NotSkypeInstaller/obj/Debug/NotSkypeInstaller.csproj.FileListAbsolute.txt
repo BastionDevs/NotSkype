@@ -10,3 +10,9 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeIn
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.pdb
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.InstallPyWinXP.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.InstallPyWin10.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\bin\Debug\Ionic.Zip.dll
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\bin\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\Interop.IWshRuntimeLibrary.dll
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.csproj.ResolveComReference.cache
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkypeInstaller.Form2.resources
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkypeInstaller\obj\Debug\NotSkype.7A12937F.Up2Date

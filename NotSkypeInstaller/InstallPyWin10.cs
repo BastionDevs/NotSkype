@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -106,6 +108,38 @@ namespace NotSkypeInstaller
             {
                 label4.Text += " x86";
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!radioButtonSkipPy.Checked)
+            {
+                string arch;
+                if (System.Environment.GetEnvironmentVariable("PROCESSOR_ARCHITECTURE") == "AMD64") { arch = "x64"; } else { arch = "x86"; }
+
+                string url;
+                if (arch == "x64") { url = "https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe"; } else { url = "https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe"; }
+
+                string filename = @"C:\BastionSG\NotSkype\InstallTemp\pyinstall-latest.exe";
+
+                DownloadUtils.DownloadFile(url, filename);
+                ExecuteAsAdmin(filename, "/passive InstallAllUsers=1 PrependPath=1");
+                
+            } else
+            {
+                //next form
+            }
+        }
+
+        public void ExecuteAsAdmin(string fileName, string args)
+        {
+            Process proc = new Process();
+            proc.StartInfo.FileName = fileName;
+            proc.StartInfo.UseShellExecute = true;
+            proc.StartInfo.Verb = "runas";
+            proc.StartInfo.Arguments = args;
+            proc.Start();
+            proc.WaitForExit();
         }
     }
 }
