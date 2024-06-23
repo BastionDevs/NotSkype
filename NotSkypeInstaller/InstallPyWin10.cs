@@ -121,23 +121,23 @@ namespace NotSkypeInstaller
                 if (arch == "x64") { url = "https://www.python.org/ftp/python/3.12.4/python-3.12.4-amd64.exe"; } else { url = "https://www.python.org/ftp/python/3.12.4/python-3.12.4.exe"; }
 
                 string filename = @"C:\BastionSG\NotSkype\InstallTemp\pyinstall-latest.exe";
+                string filefolder = @"C:\BastionSG\NotSkype\InstallTemp\";
 
                 DownloadUtils.DownloadFile(url, filename);
-                ExecuteAsAdmin(filename, "/passive InstallAllUsers=1 PrependPath=1");
+                ExecuteAsAdmin(filename, "/passive InstallAllUsers=1 PrependPath=1", filefolder);
                 
-            } else
-            {
-                //next form
             }
+            new Form2().Show();
         }
 
-        public void ExecuteAsAdmin(string fileName, string args)
+        public void ExecuteAsAdmin(string fileName, string args, string folder)
         {
             Process proc = new Process();
             proc.StartInfo.FileName = fileName;
             proc.StartInfo.UseShellExecute = true;
             proc.StartInfo.Verb = "runas";
             proc.StartInfo.Arguments = args;
+            proc.StartInfo.WorkingDirectory = folder;
             proc.Start();
             proc.WaitForExit();
         }

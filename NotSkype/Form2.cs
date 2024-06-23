@@ -64,18 +64,12 @@ namespace NotSkype
 
         private void button1_Click(object sender, EventArgs e)
         {
+            PythonIntegration.InitPython();
             PythonIntegration.Login(username, textBox1.Text);
             this.Hide();
-            PythonIntegration.Login(username, textBox1.Text);
             new Form3(username).ShowDialog();
-            PythonIntegration.StopServer();
+            PythonUtils.StopPython();
             Application.Exit();
-        }
-
-        private void SendToServer(string cmdstring)
-        {
-            //MessageBox.Show("TCP Server Not Configured!");
-            //MessageBox.Show("[DEBUG] " + cmdstring);
         }
     }
 }

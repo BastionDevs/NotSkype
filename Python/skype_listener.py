@@ -1,116 +1,138 @@
-import sys
-import requests
 from flask import Flask, request, jsonify
 from threading import Thread
-from skpy import Skype, SkypeEventLoop, SkypeNewMessageEvent
+import atexit
+import requests
+import time
+from skpy import Skype, SkypeNewMessageEvent, SkypeAuthException
+import sys
+import os
 
-try:
-    import simplejson as json
-except ImportError:
-    import json
+# Ensure minimum Python version
+if sys.version_info < (3, 4, 10):
+    raise RuntimeError("This script requires Python 3.4.10 or newer")
 
 app = Flask(__name__)
 
-class SkypeListener(SkypeEventLoop):
-    def __init__(self, username, password, server_url, intended_user):
-        super(SkypeListener, self).__init__(username, password)
-        self.server_url = server_url
-        self.intended_user = intended_user
+if len(sys.argv) != 5:
+    print("Usage: script.py <email> <password> <server_url> <port>", file=sys.stderr)
+    sys.exit(1)
 
-    def onEvent(self, event):
-        if isinstance(event, SkypeNewMessageEvent):
-            sender_username = event.msg.userId
-            sender_display_name = self.contacts[sender_username].name
-            message = event.msg.content
-            if sender_username != self.intended_user:
-                self.send_message_to_other_server(sender_username, sender_display_name, message)
-            else:
-                self.send_message_to_recipient(message)
+email = sys.argv[1]
+password = sys.argv[2]
+server_url = sys.argv[3]
+port = int(sys.argv[4])
 
-    def send_message_to_other_server(self, username, display_name, message):
-        payload = {
-            'username': username,
-            'display_name': display_name,
-            'message': message
-        }
+intended_user = None
+shutdown_flag = False  # Flag to signal server shutdown
+
+try:
+    sk = Skype(email, password)
+except SkypeAuthException as e:
+    print("Failed to authenticate with Skype: ", e)
+    sys.exit(1)
+
+def run_flask():
+    app.run(host='0.0.0.0', port=port)
+
+def shutdown_server():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
+
+def run_skype_listener():
+    global shutdown_flag
+    while not shutdown_flag:
         try:
-            response = requests.post("{}/othermsg".format(self.server_url), json=payload, headers={'Content-Type': 'application/json'})
-            if response.status_code == 200:
-                print("Message sent to server successfully.")
-            else:
-                print("Failed to send message to server. Status code: {}".format(response.status_code))
+            for event in sk.getEvents():
+                if isinstance(event, SkypeNewMessageEvent):
+                    msg = event.msg
+                    if msg.type == 'RichText' or msg.type == 'Text':
+                        print("Received message from {}: {}".format(msg.userId, msg.content))
+                        if intended_user and msg.userId == intended_user:
+                            requests.post(server_url, data=msg.content.encode('utf-8'))
+                        else:
+                            requests.post(server_url + "/othermsg", data=msg.content.encode('utf-8'))
         except Exception as e:
-            print("An error occurred while sending message to server: {}".format(e))
+            print("Error: ", e)
+            time.sleep(10)
 
-    def send_message_to_recipient(self, message):
-        # Code to send message to recipient
+@app.route('/shutdown', methods=['POST'])
+def shutdown():
+    print("Received shutdown request")
+    os._exit(0)  # Forcefully terminate the application
 
-    # Other methods like get_display_name, send_display_name_to_server, etc. remain unchanged
+@app.route('/intendeduser', methods=['POST'])
+def set_intended_user():
+    global intended_user
+    intended_user = request.data.decode('utf-8')
+    return "Intended user set to: {}".format(intended_user)
 
-def start_flask_app(skype_listener, port):
-    @app.route('/send_message', methods=['POST'])
-    def send_message():
-        data = request.json
+@app.route('/currentuserdisplayname', methods=['POST'])
+def get_current_user_display_name():
+    try:
+        first_name = sk.user.name.first if sk.user.name.first else ""
+        last_name = sk.user.name.last if sk.user.name.last else ""
+        full_name = (first_name + " " + last_name).strip()
+        return full_name if full_name else "Unnamed User"
+    except Exception as e:
+        return "Error: {}".format(str(e)), 500
+
+@app.route('/currentusername', methods=['POST'])
+def get_current_username():
+    try:
+        return sk.user.id
+    except Exception as e:
+        return "Error: {}".format(str(e)), 500
+
+@app.route('/displayname', methods=['POST'])
+def get_display_name():
+    try:
+        username = request.get_data().decode('utf-8')
+        user = sk.contacts.user(username)
+        if user:
+            first_name = user.name.first if user.name.first else ""
+            last_name = user.name.last if user.name.last else ""
+            full_name = (first_name + " " + last_name).strip()
+            return full_name if full_name else "Unnamed User"
+        else:
+            return "Error: User not found", 404
+    except Exception as e:
+        return "Error: {}".format(str(e)), 500
+
+@app.route('/sendmessage', methods=['POST'])
+def send_message():
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({"status": "error", "message": "No JSON data provided"}), 400
+
         recipient = data.get('recipient')
         message = data.get('message')
+
         if not recipient or not message:
-            return jsonify({'error': 'Recipient and message are required'}), 400
-        try:
-            skype_listener.send_message_to_recipient(recipient, message)
-            return jsonify({'status': 'Message sent successfully'}), 200
-        except Exception as e:
-            return jsonify({'error': str(e)}), 500
+            return jsonify({"status": "error", "message": "'recipient' and 'message' fields are required"}), 400
 
-    @app.route('/getdisplayname', methods=['POST'])
-    def get_display_name():
-        skype_id = request.data.decode('utf-8')
-        if not skype_id:
-            return jsonify({'error': 'Skype ID is required'}), 400
-        try:
-            skype_listener.get_display_name(skype_id)
-            return jsonify({'status': 'Display name retrieval in process'}), 200
-        except Exception as e:
-            return jsonify({'error': str(e)}), 500
+        sk.contacts[recipient].chat.sendMsg(message)
 
-    @app.route('/get_current_user_displayname', methods=['GET'])
-    def get_current_user_displayname():
-        try:
-            current_user = skype_listener.user
-            display_name = current_user.name
-            return display_name, 200
-        except Exception as e:
-            return jsonify({'error': str(e)}), 500
+        return jsonify({"status": "success", "message": "Message sent successfully"})
+    except Exception as e:
+        return jsonify({"status": "error", "message": str(e)}), 500
 
-    @app.route('/shutdown', methods=['POST'])
-    def shutdown():
-        func = request.environ.get('werkzeug.server.shutdown')
-        if func is None:
-            raise RuntimeError('Not running with the Werkzeug Server')
-        func()
-        return 'Server shutting down...'
+flask_thread = Thread(target=run_flask)
+flask_thread.start()
 
-    app.run(port=port)
+skype_thread = Thread(target=run_skype_listener)
+skype_thread.start()
 
-def main():
-    if len(sys.argv) != 6:
-        print("Usage: python skype_listener.py <username> <password> <server_url> <flask_port> <intended_user>")
-        sys.exit(1)
+def on_exit():
+    global shutdown_flag
+    shutdown_flag = True
+    try:
+        requests.post('http://127.0.0.1:{}/shutdown'.format(port))
+    except Exception as e:
+        print("Error during shutdown: ", e)
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    server_url = sys.argv[3]
-    flask_port = int(sys.argv[4])
-    intended_user = sys.argv[5]
-
-    skype_listener = SkypeListener(username, password, server_url, intended_user)
-
-    # Start Flask app in a separate thread
-    flask_thread = Thread(target=start_flask_app, args=(skype_listener, flask_port))
-    flask_thread.daemon = True
-    flask_thread.start()
-
-    # Start Skype event loop
-    skype_listener.loop()
-
-if __name__ == "__main__":
-    main()
+atexit.register(on_exit)
+flask_thread.join()
+skype_thread.join()

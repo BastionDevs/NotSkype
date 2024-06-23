@@ -82,10 +82,7 @@ namespace NotSkypeInstaller
                 ExecuteAsAdmin(filename, "/passive InstallAllUsers=1 PrependPath=1");
 
             }
-            else
-            {
-                //next form
-            }
+            new Form2().Show();
         }
 
         public void ExecuteAsAdmin(string fileName, string args)

@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -21,6 +23,7 @@ namespace NotSkype
 
         public static void InitPython() 
         {
+            Config.GetConfig();
             pythonport = Config.PythonFlaskPort;
             clientport = Config.ClientPort;
             firstboot = Config.FirstBoot;
@@ -41,93 +44,7 @@ namespace NotSkype
             {
                 InstallPythonPackages();
             }
-            RunScript();
-        }
-
-        public static void StopServer()
-        {
-            // URL for the POST request
-            string url = "http://localhost:"+Config.PythonFlaskPort+"/shutdown";
-
-            // Create a request object
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "POST"; // Specify the POST method
-
-            try
-            {
-                // Get the response from the server
-                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-                {
-                    // Check if the response status is OK (200)
-                    if (response.StatusCode == HttpStatusCode.OK)
-                    {
-                        Console.WriteLine("Server shutdown request sent successfully.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Error: " + response.StatusCode);
-                    }
-                }
-            }
-            catch (WebException ex)
-            {
-                // Handle any exceptions that occur during the request
-                if (ex.Response != null)
-                {
-                    using (HttpWebResponse errorResponse = (HttpWebResponse)ex.Response)
-                    {
-                        Console.WriteLine("Error: " + errorResponse.StatusCode);
-                        // You can read error details here if necessary
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("WebException: " + ex.Message);
-                }
-            }
-        }
-
-        static void RunScript()
-        {
-            // Define the path to the python executable
-            string pythonExePath = "python.exe";
-
-            // Define the arguments for the Python script
-            string scriptPath = Config.InstallPath + @"\PythonScript\skype_listener.py";
-            string email = uname;
-            string pwd = password;
-            string url = "http://localhost:"+clientport;
-            string port = pythonport;
-
-            // Combine the script path and arguments into one string
-            string arguments = $"{scriptPath} {email} {pwd} {url} {port}";
-
-            // Create a new process start info
-            ProcessStartInfo psi = new ProcessStartInfo
-            {
-                FileName = pythonExePath,
-                Arguments = arguments,
-                RedirectStandardOutput = true,
-                RedirectStandardError = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-
-            // Start the process
-            Process process = new Process
-            {
-                StartInfo = psi
-            };
-
-            try
-            {
-                process.Start();
-            }
-            catch (Exception e)
-            {
-                //Console.WriteLine($"An error occurred: {e.Message}");
-                MessageBox.Show($"An error occurred: {e.Message}", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
-            }
+            PythonUtils.StartPython(username, password, Config.ClientPort, Config.PythonFlaskPort);
         }
 
         static void InstallPythonPackages()
@@ -145,8 +62,7 @@ namespace NotSkype
                 Arguments = arguments,
                 RedirectStandardOutput = true,
                 RedirectStandardError = true,
-                UseShellExecute = false,
-                CreateNoWindow = true
+                UseShellExecute = false
             };
 
             // Create a new process
@@ -154,7 +70,7 @@ namespace NotSkype
             {
                 process.StartInfo = startInfo;
                 process.OutputDataReceived += (sender, e) => Console.WriteLine(e.Data);
-                process.ErrorDataReceived += (sender, e) => Console.WriteLine("ERROR: " + e.Data);
+                process.ErrorDataReceived += (sender, e) => MessageBox.Show("ERROR: " + e.Data);
 
                 // Start the process
                 process.Start();
@@ -169,6 +85,5 @@ namespace NotSkype
                 Console.WriteLine($"Process exited with code {process.ExitCode}");
             }
         }
-
     }
 }

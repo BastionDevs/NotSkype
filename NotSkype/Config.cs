@@ -20,7 +20,7 @@ namespace NotSkype
 
         public static string FirstBoot;
 
-        static void GetConfig()
+        public static void GetConfig()
         {
             IniFile ConfigFile = new IniFile(Directory.GetCurrentDirectory() + @"\config.ini");
             ProjVer = ConfigFile.Read("projver", "swinfo");

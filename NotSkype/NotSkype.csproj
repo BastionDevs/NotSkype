@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <HintPath>C:\Windows\Microsoft.NET\Framework64\v2.0.50727\System.dll</HintPath>
@@ -71,9 +74,11 @@
       <DependentUpon>IMWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="IniFile.cs" />
+    <Compile Include="NetUtils.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PythonIntegration.cs" />
+    <Compile Include="PythonUtils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +115,8 @@
     <None Include="Resources\2003.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\cloudui.png" />
+    <None Include="Resources\21627.png" />
     <Content Include="Resources\notskypecanva.png" />
     <Content Include="Resources\skype6.png" />
     <Content Include="Resources\skype7ui %281%29 %282%29 %281%29.png" />

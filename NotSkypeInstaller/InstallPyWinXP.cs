@@ -74,10 +74,7 @@ namespace NotSkypeInstaller
                 proc2.WaitForExit();
 
             }
-            else
-            {
-                //next form
-            }
+            new Form2().Show();
         }
 
         private void unzip(string zipFilePath, string extractPath)
