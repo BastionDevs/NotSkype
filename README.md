@@ -8,8 +8,13 @@ You may still access the projects in the _Old_ folder.
 
 # Contributors
 ![developers](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/devs.png)  
-[ChatGPT](https://chat.openai.com)   
+[ChatGPT](https://chat.openai.com)  
+  
+suvikplayzrb, for never failing to not miss his deadlines  
+![suvikplayzrb](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/svkdev.png)  
 
 # Credits
 [SkPy](https://github.com/Terrance/SkPy)  
-[Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)  
+[tiny-ini-file-class](https://github.com/niklyadov/tiny-ini-file-class)  
+[PythonWindows](https://github.com/adang1345/PythonWindows)  
+[Matej Horvat's Python 3.4.10 for Windows](https://matejhorvat.si/en/windows/python/index.htm)  
