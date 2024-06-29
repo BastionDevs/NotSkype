@@ -14,12 +14,22 @@ namespace NotSkype
         public static void StartPython(string email, string password, string clientport, string pyport)
         {
             Process process = new Process();
-            process.StartInfo.FileName = "python.exe";
+            //process.StartInfo.FileName = "python.exe";
+            //process.StartInfo.UseShellExecute = false;
+            //process.StartInfo.CreateNoWindow = false;
+            //process.StartInfo.RedirectStandardOutput = true;
+            //process.StartInfo.RedirectStandardError = true;
+            //process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
+
+            //process.StartInfo.Arguments = $"C:\\BastionSG\\NotSkype\\PythonScript\\skype_listener.py {email} {password} {clientport} {pyport}";
+
+            //cmd method
+            process.StartInfo.FileName = "CMD.exe";
             process.StartInfo.UseShellExecute = false;
-            process.StartInfo.CreateNoWindow = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.RedirectStandardError = true;
-            process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+
+            process.StartInfo.Arguments = $"/K python.exe C:\\BastionSG\\NotSkype\\PythonScript\\skype_listener.py {email} {password} {clientport} {pyport}";
 
             process.Start();
 
