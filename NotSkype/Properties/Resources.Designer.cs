@@ -83,6 +83,16 @@ namespace NotSkype.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _22675 {
+            get {
+                object obj = ResourceManager.GetObject("22675", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cloudui {
             get {
                 object obj = ResourceManager.GetObject("cloudui", resourceCulture);
@@ -96,6 +106,16 @@ namespace NotSkype.Properties {
         internal static System.Drawing.Bitmap notskypecanva {
             get {
                 object obj = ResourceManager.GetObject("notskypecanva", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap OG_Bg {
+            get {
+                object obj = ResourceManager.GetObject("OG Bg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

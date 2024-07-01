@@ -114,6 +114,7 @@
             this.textBox1.Size = new System.Drawing.Size(350, 22);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Email, phone, or Skype name";
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label3
             // 
@@ -259,6 +260,7 @@
             // 
             this.menuItem7.Index = 3;
             this.menuItem7.Text = "About NotSkype";
+            this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
             // 
             // pictureBox1
             // 
@@ -310,6 +312,7 @@
             this.ClientSize = new System.Drawing.Size(710, 460);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Menu = this.mainMenu1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

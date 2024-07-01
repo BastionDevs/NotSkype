@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.menuItem7 = new System.Windows.Forms.MenuItem();
             this.menuItem5 = new System.Windows.Forms.MenuItem();
             this.menuItem4 = new System.Windows.Forms.MenuItem();
@@ -61,6 +62,7 @@
             // 
             this.menuItem7.Index = 3;
             this.menuItem7.Text = "About NotSkype";
+            this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
             // 
             // menuItem5
             // 
@@ -194,6 +196,7 @@
             this.textBox1.Size = new System.Drawing.Size(350, 22);
             this.textBox1.TabIndex = 4;
             this.textBox1.Text = "Password";
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label3
             // 
@@ -201,9 +204,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(196, 54);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(304, 25);
+            this.label3.Size = new System.Drawing.Size(282, 25);
             this.label3.TabIndex = 2;
-            this.label3.Text = "with NotSkype or Thunder account";
+            this.label3.Text = "with Skype or Microsoft account";
             // 
             // label2
             // 
@@ -220,7 +223,7 @@
             this.panel2.Controls.Add(this.linkLabel3);
             this.panel2.Controls.Add(this.linkLabel2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 332);
+            this.panel2.Location = new System.Drawing.Point(0, 311);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(710, 33);
             this.panel2.TabIndex = 0;
@@ -237,7 +240,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(710, 365);
+            this.panel1.Size = new System.Drawing.Size(710, 344);
             this.panel1.TabIndex = 8;
             // 
             // mainMenu1
@@ -263,9 +266,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(710, 460);
+            this.ClientSize = new System.Drawing.Size(710, 439);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Menu = this.mainMenu1;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

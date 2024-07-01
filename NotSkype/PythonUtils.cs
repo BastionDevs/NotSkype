@@ -80,7 +80,21 @@ namespace NotSkype
 
         public static string GetSelfUsername()
         {
-            return NetUtils.POSTRequest("http://localhost:" + Config.PythonFlaskPort + "/currentusername", "");
+            string result = NetUtils.POSTRequest("http://localhost:" + Config.PythonFlaskPort + "/currentusername", "");
+            if (result.Contains("WebException"))
+            {
+                result = NetUtils.POSTRequest("http://localhost:" + Config.PythonFlaskPort + "/currentusername", "");
+                if (result.Contains("WebException"))
+                {
+                    result = NetUtils.POSTRequest("http://localhost:" + Config.PythonFlaskPort + "/currentusername", "");
+                    if (result.Contains("WebException"))
+                    {
+                        result = "Error occured while obtaining username.";
+                    }
+                }
+            }
+
+            return result;
         }
 
     }

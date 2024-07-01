@@ -71,5 +71,18 @@ namespace NotSkype
             PythonUtils.StopPython();
             Application.Exit();
         }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+        }
+
+        private void menuItem7_Click(object sender, EventArgs e)
+        {
+            new AboutNotSkype().ShowDialog();
+        }
     }
 }
