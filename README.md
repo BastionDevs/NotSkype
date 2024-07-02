@@ -1,6 +1,6 @@
 # Welcome to the NotSkype Project!
 NotSkype is a functional Skype Classic (5-7) _replica_.  
-Current development goal: Get Python script to run.  
+Current development goal: Convert _SkPy_ to C#.  
 
 ## Notice on NotSkypeServer
 The NotSkype Server Software has been deprecated since NotSkype now connects to Microsoft servers.  
