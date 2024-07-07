@@ -29,7 +29,7 @@ namespace NotSkype
             process.StartInfo.RedirectStandardOutput = true;
             process.StartInfo.RedirectStandardError = true;
 
-            process.StartInfo.Arguments = $"/K python.exe C:\\BastionSG\\NotSkype\\PythonScript\\skype_listener.py {email} {password} {clientport} {pyport}";
+            process.StartInfo.Arguments = $"/K python.exe C:\\BastionSG\\NotSkype\\PythonScript\\skype_listener.py {email} {password} http://localhost:{clientport} {pyport}";
 
             process.Start();
 
@@ -70,7 +70,7 @@ namespace NotSkype
 
         public static string CurrentUserDisplayName()
         {
-            return NetUtils.POSTRequest("http://localhost:" + Config.PythonFlaskPort + "/currentuserdisplayname", "");
+            return NetUtils.POSTRequest("http://localhost:" + Config.PythonFlaskPort + "/currentdisplayname", "");
         }
 
         public static void IntendedUser(string user)
