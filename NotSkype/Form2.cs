@@ -64,11 +64,8 @@ namespace NotSkype
 
         private void button1_Click(object sender, EventArgs e)
         {
-            PythonIntegration.InitPython();
-            PythonIntegration.Login(username, textBox1.Text);
             this.Hide();
             new Form3(username).ShowDialog();
-            PythonUtils.StopPython();
             Application.Exit();
         }
 

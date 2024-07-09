@@ -24,9 +24,6 @@ namespace NotSkype
         {
             InitializeComponent();
             recepientName = recepient;
-            displayName = PythonUtils.GetDisplayName(recepient);
-            senderName = PythonUtils.GetSelfUsername();
-            displayNameSelf = PythonUtils.CurrentUserDisplayName();
             label6.Text = recepient;
             label5.Text = displayName;
         }
@@ -72,93 +69,13 @@ namespace NotSkype
             }
         }
 
-        private void IMWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            StopServer();
-        }
-
         public void AddMessage(string message, string username)
         {
             textBoxChatLog.Text += "\r\n <" + username + "> " + message;
         }
 
         public void SendMessageToUser(string message) {
-            PythonUtils.SendMessage(recepientName, message);
-        }
-
-        //httplisteners
-        private HttpListener _listener;
-        private Thread _listenerThread;
-
-        private void StartHttpListener()
-        {
-            _listener = new HttpListener();
-            _listener.Prefixes.Add("http://localhost:" + Config.ClientPort + "/");
-            _listener.Start();
-            _listenerThread = new Thread(new ThreadStart(ListenForRequests));
-            _listenerThread.IsBackground = true;
-            _listenerThread.Start();
-        }
-
-        private void ListenForRequests()
-        {
-            while (_listener.IsListening)
-            {
-                try
-                {
-                    var context = _listener.GetContext();
-                    if (context.Request.HttpMethod == "POST")
-                    {
-                        HandlePostRequest(context);
-                    }
-                    else
-                    {
-                        context.Response.StatusCode = (int)HttpStatusCode.MethodNotAllowed;
-                        context.Response.Close();
-                    }
-                }
-                catch (HttpListenerException)
-                {
-                    // Listener was stopped, ignore exception
-                }
-                catch (Exception ex)
-                {
-                    // Handle any other exceptions
-                    Console.WriteLine($"Error: {ex.Message}");
-                }
-            }
-        }
-
-        private void HandlePostRequest(HttpListenerContext context)
-        {
-            string requestBody;
-            using (var reader = new System.IO.StreamReader(context.Request.InputStream, context.Request.ContentEncoding))
-            {
-                requestBody = reader.ReadToEnd();
-            }
-
-            // Here you can process the request body as needed
-            Console.WriteLine(requestBody);
-            AddMessage(requestBody, displayName);
-
-            // Send a response
-            var responseString = "Data received";
-            var buffer = Encoding.UTF8.GetBytes(responseString);
-            context.Response.ContentLength64 = buffer.Length;
-            context.Response.OutputStream.Write(buffer, 0, buffer.Length);
-            context.Response.OutputStream.Close();
-        }
-
-        public void StopServer()
-        {
-            if (_listener != null && _listener.IsListening)
-            {
-                _listener.Stop();
-            }
-            if (_listenerThread != null && _listenerThread.IsAlive)
-            {
-                _listenerThread.Join();
-            }
+            
         }
 
     }
