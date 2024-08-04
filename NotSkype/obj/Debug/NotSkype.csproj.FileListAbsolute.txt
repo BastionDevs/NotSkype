@@ -22,7 +22,6 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\bin\Debug\NotSkype.exe
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\bin\Debug\NotSkype.pdb
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.AssemblyReference.cache
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.Form1.resources
-C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.Form2.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.Properties.Resources.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.GenerateResource.cache
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.CoreCompileInputs.cache
@@ -31,9 +30,6 @@ C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.pdb
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.Form3.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.IMWindow.resources
 C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.AboutNotSkype.resources
-C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\bin\Debug\Newtonsoft.Json.dll
-C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\bin\Debug\Newtonsoft.Json.xml
-C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.Up2Date
 G:\Git\NotSkype\NotSkype\bin\Debug\NotSkype.exe
 G:\Git\NotSkype\NotSkype\bin\Debug\NotSkype.pdb
 G:\Git\NotSkype\NotSkype\bin\Debug\Newtonsoft.Json.dll

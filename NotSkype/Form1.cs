@@ -15,7 +15,7 @@ namespace NotSkype
         private Timer resizeTimer;
         private Size targetSize;
         private Size originalSize;
-        private int resizeSteps = 20; // Number of steps for smooth resizing
+        private int resizeSteps = 10; // Number of steps for smooth resizing
         private int currentStep = 0;
 
         public Form1()
@@ -73,17 +73,35 @@ namespace NotSkype
         }
         private void btnunifiedSignIn_Click(object sender, HtmlElementEventArgs e)
         {
-            HtmlElement emailInput = webBrowser1.Document.GetElementById("unifiedUsername");
-            if (emailInput != null)
+            if (!webBrowser1.Url.ToString().Contains("loginPwd.html"))
             {
-                string emailaddr = emailInput.GetAttribute("value");
+                HtmlElement emailInput = webBrowser1.Document.GetElementById("unifiedUsername");
+                if (emailInput != null)
+                {
+                    string emailaddr = emailInput.GetAttribute("value");
+                }
+            } else
+            {
+                HtmlElement pwdInput = webBrowser1.Document.GetElementById("unifiedPassword");
+                if (pwdInput != null)
+                {
+                    string pwd = pwdInput.GetAttribute("value");
+                }
 
                 e.ReturnValue = false;
 
                 webBrowser1.Document.InvokeScript("redirLoad");
-            }
 
-            StartSmoothResize(new Size(720, 481));
+                StartSmoothResize(new Size(720, 481));
+            }
+        }
+
+        private void webBrowser1_LocationChanged(object sender, EventArgs e)
+        {
+            if (webBrowser1.Url.AbsoluteUri == String.Format("file:///{0}/html/loginPwd.html", Directory.GetCurrentDirectory()))
+            {
+
+            }
         }
     }
 }
