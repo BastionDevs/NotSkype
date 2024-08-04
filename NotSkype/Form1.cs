@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -11,90 +12,78 @@ namespace NotSkype
 {
     public partial class Form1 : Form
     {
-        string placeholdertext;
+        private Timer resizeTimer;
+        private Size targetSize;
+        private Size originalSize;
+        private int resizeSteps = 20; // Number of steps for smooth resizing
+        private int currentStep = 0;
 
         public Form1()
         {
             InitializeComponent();
+            InitializeSmoothResize();
+        }
+
+        private void InitializeSmoothResize()
+        {
+            resizeTimer = new Timer();
+            resizeTimer.Interval = 10; // Timer interval in milliseconds
+            resizeTimer.Tick += ResizeTimer_Tick;
+        }
+
+        private void ResizeTimer_Tick(object sender, EventArgs e)
+        {
+            if (currentStep < resizeSteps)
+            {
+                int width = originalSize.Width + (targetSize.Width - originalSize.Width) * currentStep / resizeSteps;
+                int height = originalSize.Height + (targetSize.Height - originalSize.Height) * currentStep / resizeSteps;
+                this.Size = new Size(width, height);
+                this.CenterToScreen();
+                currentStep++;
+            }
+            else
+            {
+                resizeTimer.Stop();
+                this.Size = targetSize; // Ensure final size is set
+                this.CenterToScreen();
+            }
+        }
+
+        private void StartSmoothResize(Size newSize)
+        {
+            targetSize = newSize;
+            originalSize = this.Size;
+            currentStep = 0;
+            resizeTimer.Start();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label2.Left = (this.ClientSize.Width - label2.Size.Width) / 2;
-            label3.Left = (this.ClientSize.Width - label3.Size.Width) / 2;
-            textBox1.Left = (this.ClientSize.Width - textBox1.Size.Width) / 2;
-            button1.Left = (this.ClientSize.Width - button1.Size.Width) / 2;
-            linkLabel1.Left = (this.ClientRectangle.Width - linkLabel1.Size.Width) / 2;
-
-            textBox1.GotFocus += RemoveText;
-            textBox1.LostFocus += AddText;
-            
-            placeholdertext = "Email, phone, or Skype name";
-
-            button1.Focus();
+            string curDir = Directory.GetCurrentDirectory();
+            webBrowser1.Navigate(String.Format("file:///{0}/html/login.html", curDir));
         }
 
-        public void RemoveText(object sender, EventArgs e)
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-            if (textBox1.Text == placeholdertext)
+            HtmlElement btnunifiedSignIn = webBrowser1.Document.GetElementById("unifiedSignIn");
+            if (btnunifiedSignIn != null)
             {
-                textBox1.Text = "";
+                btnunifiedSignIn.Click += btnunifiedSignIn_Click;
             }
         }
-
-        public void AddText(object sender, EventArgs e)
+        private void btnunifiedSignIn_Click(object sender, HtmlElementEventArgs e)
         {
-            if (string.IsNullOrEmpty(textBox1.Text))
-                textBox1.Text = placeholdertext;
-        }
-
-        private void Close_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Form2(textBox1.Text).ShowDialog();
-            this.Show();
-        }
-
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (e.CloseReason == CloseReason.UserClosing)
+            HtmlElement emailInput = webBrowser1.Document.GetElementById("unifiedUsername");
+            if (emailInput != null)
             {
-                this.WindowState = FormWindowState.Minimized;
-                e.Cancel = true;
+                string emailaddr = emailInput.GetAttribute("value");
+
+                e.ReturnValue = false;
+
+                webBrowser1.Document.InvokeScript("redirLoad");
             }
-        }
 
-        private void toolStripMenuItem2_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            this.Show();
-        }
-
-        private void Quit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void textBox1_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                button1.PerformClick();
-            }
-        }
-
-        private void menuItem7_Click(object sender, EventArgs e)
-        {
-            new AboutNotSkype().ShowDialog();
+            StartSmoothResize(new Size(720, 481));
         }
     }
 }

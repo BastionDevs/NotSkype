@@ -1,0 +1,1811 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{
+    margin:0;
+    padding:0;
+    border:0;
+    font:inherit;
+    vertical-align:baseline;
+    text-decoration:none
+}
+body,h1,p{
+    line-height:1.3333333333em
+}
+.unifiedUsername,body{
+    -webkit-font-smoothing:antialiased
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{
+    display:block
+}
+ol,ul{
+    list-style:none
+}
+blockquote,q{
+    quotes:none
+}
+blockquote:after,blockquote:before,q:after,q:before{
+    content:'';
+    content:none
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0
+}
+:focus{
+    outline:0
+}
+@font-face{
+    font-family:'Segoe UI Webfont';
+	src:local("Segoe UI Light"),url(../font/font-light.ttf) format("truetype");
+    font-weight:200;
+    font-style:normal
+}
+@font-face{
+    font-family:'Segoe UI Webfont';
+    src:local("Segoe UI"),url(../font/font.ttf) format("truetype");
+	font-weight:400;
+    font-style:normal
+}
+@font-face{
+    font-family:'Segoe UI Webfont';
+    src:local("Segoe UI Semibold"),url(../font/font-bold.ttf) format("truetype");
+    font-weight:600;
+    font-style:normal
+}
+.bold strong,.error,.light,.secondary-copy,.skype-button,.skype-button--secondary,.skype-button:disabled,.subtitle,.unifiedLoginHeader,a,a.secondary,body,h1,input,p{
+    font-family:"Segoe UI Webfont",-apple-system,"Helvetica Neue","Lucida Grande",Roboto,Ebrima,"Nirmala UI",Gadugi,"Segoe Xbox Symbol","Segoe UI Symbol","Meiryo UI","Khmer UI",Tunga,"Lao UI",Raavi,"Iskoola Pota",Latha,Leelawadee,"Microsoft YaHei UI","Microsoft JhengHei UI","Malgun Gothic","Estrangelo Edessa","Microsoft Himalaya","Microsoft New Tai Lue","Microsoft PhagsPa","Microsoft Tai Le","Microsoft Yi Baiti","Mongolian Baiti","MV Boli","Myanmar Text","Cambria Math"
+}
+.light,.unifiedLoginHeader,h1{
+    font-weight:200
+}
+.secondary-copy,.subtitle,a.secondary,body,input,p{
+    font-weight:400
+}
+.bold strong,.error,.skype-button,.skype-button--secondary,.skype-button:disabled,a{
+    font-weight:600
+}
+body{
+    font-size:15px
+}
+h1{
+    font-size:2em
+}
+@media (max-width:528px){
+    h1{
+        font-size:1.4666666667em;
+        line-height:1.2727272727em
+    }
+}
+p{
+    font-size:1em
+}
+.error,.secondary-copy,a.secondary{
+    font-size:.8666666667em;
+    line-height:1.5384615385em
+}
+em,i{
+    font-style:italic
+}
+.skype-button,.skype-button--secondary,.skype-button:disabled,a{
+    color:#FFF;
+    text-decoration:none
+}
+a.secondary{
+    color:#CCEFFC;
+    text-decoration:none
+}
+a.secondary:active,a.secondary:hover,a:active,a:hover{
+    text-decoration:underline
+}
+.skype-button--secondary:focus,.skype-button:focus,a:focus{
+    color:#CCEFFC;
+    outline:#CCEFFC dotted 1px
+}
+.signInTitle,.skype-button--secondary:active,.skype-button--secondary:hover,.skype-button:active,.skype-button:hover,a:active,a:hover{
+    outline:0
+}
+a.secondary:link,a.secondary:visited,a:link,a:visited{
+    color:#077DB4
+}
+input{
+    color:#000
+}
+.error{
+    color:#FFF
+}
+.secondary-copy{
+    color:#CCEFFC
+}
+html{
+    width:100%;
+    overflow:hidden
+}
+body{
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+    cursor:default;
+    background:#FFF;
+    color:#000
+}
+body .working{
+    cursor:wait
+}
+.titleLarge{
+    font-size:18px;
+    line-height:normal
+}
+.unifiedSkypeLoginView,.view{
+    display:block;
+    width:672px;
+    height:348px;
+    padding:94px 24px 0;
+    position:absolute;
+    top:0;
+    left:0;
+    overflow:hidden
+}
+.unifiedSkypeLoginView{
+    width:720px;
+    height:382px;
+    padding:94px 0 0;
+    position:relative;
+    margin:0
+}
+div.active.unifiedSkypeLoginView,div.view.active{
+    display:block
+}
+.contentCenter{
+    width:352px;
+    position:absolute;
+    top:104px;
+    left:184px
+}
+.columnCenter{
+    width:312px;
+    position:relative
+}
+.margin-top{
+    margin-top:16px
+}
+.pad{
+    height:15px
+}
+.pixelpad{
+    padding-left:1px
+}
+body.rtl .pixelpad{
+    padding-right:1px
+}
+.touWrap{
+    padding-top:7px
+}
+.backLink{
+    font-size:13px;
+    font-weight:700;
+    height:32px;
+    line-height:32px;
+    white-space:nowrap
+}
+.newAccountContainer{
+    padding-top:29px;
+    font-size:14px;
+    line-height:18px
+}
+.loadingView{
+    display:none;
+    position:absolute;
+    z-index:9999;
+    background:#FFF
+}
+.loadingView .skypeSpinner .spinnerAnimation .circle{
+    left:75px
+}
+div.disambiguation{
+    width:720px;
+    height:361px;
+    padding:0;
+    position:relative;
+    margin:0
+}
+div.disambiguation .backLink{
+    display:inline-block;
+    zoom:1;
+    margin:19px 21px 3px;
+    color:#CCEFFC;
+    font-size:14px;
+    border-width:0;
+    background:url(../images/normal/arrow-left.png) left top no-repeat;
+    overflow:hidden;
+    padding-left:20px
+}
+div.disambiguation .backLink span{
+    float:left
+}
+.svg div.disambiguation .backLink{
+    background:url(../images/normal/arrow-left.svg) left top no-repeat
+}
+@media (-ms-high-contrast:black-on-white){
+    .svg div.disambiguation .backLink{
+        background:url(../images/black-on-white/arrow-left.svg) left top no-repeat
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    .svg div.disambiguation .backLink{
+        background:url(../images/white-on-black/arrow-left.svg) left top no-repeat
+    }
+}
+.rtl div.disambiguation .backLink{
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+    padding-right:25px
+}
+.svg body.rtl div.disambiguation .backLink{
+    background:url(../images/normal/arrow-left.svg) right top no-repeat;
+    -ms-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg)
+}
+@media (-ms-high-contrast:black-on-white){
+    .svg body.rtl div.disambiguation .backLink{
+        background:url(../images/black-on-white/arrow-left.svg) right top no-repeat;
+        -ms-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        transform:rotate(180deg)
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    .svg body.rtl div.disambiguation .backLink{
+        background:url(../images/white-on-black/arrow-left.svg) right top no-repeat;
+        -ms-transform:rotate(180deg);
+        -webkit-transform:rotate(180deg);
+        transform:rotate(180deg)
+    }
+}
+div.disambiguation div.container{
+    text-align:center
+}
+div.disambiguation h1{
+    font-size:32px;
+    line-height:32px;
+    margin-bottom:10px
+}
+div.disambiguation h2{
+    font-size:16px;
+    margin-bottom:28px
+}
+div.disambiguation .disambiguationAccountsContainer{
+    height:331px;
+    position:relative;
+    overflow-y:auto
+}
+div.disambiguation .disambiguationAccountsList{
+    box-sizing:border-box;
+    width:310px;
+    margin:0 auto
+}
+div.disambiguation li.suggestionsListItem{
+    height:46px;
+    overflow:hidden;
+    border-radius:8px;
+    padding:10px;
+    text-align:left;
+    cursor:pointer
+}
+div.disambiguation li.suggestionsListItem:hover{
+    background:#CCEFFC
+}
+div.disambiguation li.suggestionsListItem:focus{
+    box-shadow:0 0 0 1px #CCEFFC inset
+}
+div.disambiguation li.suggestionsListItem .pictureContainer{
+    border-radius:32px;
+    top:10px;
+    left:10px
+}
+div.disambiguation li.suggestionsListItem .pictureContainer .preloaderImage{
+    border-radius:25px
+}
+div.disambiguation li.suggestionsListItem .suggestionText{
+    width:auto;
+    padding-left:17px;
+    top:7px;
+    left:56px
+}
+div.disambiguation li.suggestionsListItem .suggestionText .suggestionUsername{
+    font-size:16px;
+    margin-top:0;
+    margin-bottom:0;
+    line-height:24px
+}
+@media (-ms-high-contrast:black-on-white){
+    div.disambiguation li.suggestionsListItem:hover{
+        background:#000;
+        color:#FFF
+    }
+    div.disambiguation li.suggestionsListItem:focus{
+        box-shadow:0 0 0 1px #000 inset
+    }
+    div.disambiguation li.suggestionsListItem .suggestionText .suggestionUsername{
+        font-weight:700
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    div.disambiguation li.suggestionsListItem:hover{
+        background:#FFF;
+        color:#000
+    }
+    div.disambiguation li.suggestionsListItem:focus{
+        box-shadow:0 0 0 1px #FFF inset
+    }
+    div.disambiguation li.suggestionsListItem .suggestionText .suggestionUsername{
+        font-weight:700
+    }
+}
+div.disambiguation li.suggestionsListItem .suggestionText .suggestionType{
+    color:#077DB4;
+    font-size:14px
+}
+.rtl div.disambiguation li.suggestionsListItem{
+    text-align:right
+}
+.rtl div.disambiguation li.suggestionsListItem .pictureContainer{
+    right:10px
+}
+.rtl div.disambiguation li.suggestionsListItem .suggestionText{
+    right:56px;
+    padding-right:17px
+}
+.combobox{
+    position:relative;
+    height:32px;
+    margin-top:10px;
+    background:0 0;
+    z-index:1000
+}
+.dropdown{
+    display:none;
+    position:absolute;
+    left:0;
+    top:41px;
+    padding:0;
+    text-align:left;
+    border-width:2px;
+    border-style:solid;
+    border-color:#077DB4;
+    background:#FFF;
+    z-index:9999
+}
+.rtl .dropdown{
+    text-align:right
+}
+@media (-ms-high-contrast:black-on-white){
+    .dropdown{
+        border-color:#000
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    .dropdown{
+        border-color:#FFF;
+        background:#000
+    }
+}
+.dropdown li{
+    display:block;
+    width:272px;
+    height:24px;
+    margin:0;
+    padding:10px 20px;
+    cursor:default;
+    font-size:13px;
+    line-height:24px;
+    color:#077DB4;
+    overflow:hidden;
+    text-overflow:ellipsis
+}
+.dropdown li.selected{
+    background:#077DB4;
+    color:#FFF
+}
+.dropdownButton{
+    position:absolute;
+    top:16px;
+    left:auto;
+    right:14px;
+    width:14px;
+    height:14px
+}
+.rtl .dropdownButton{
+    left:14px;
+    right:auto
+}
+.dropdownButton:before{
+    content:url(../images/normal/arrow-down.png)
+}
+.svg .dropdownButton:before{
+    content:url(../images/normal/arrow-down.svg)
+}
+@media (-ms-high-contrast:black-on-white){
+    .dropdown li.selected{
+        background:#000;
+        color:#FFF
+    }
+    .svg .dropdownButton:before{
+        content:url(../images/black-on-white/arrow-down.svg)
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    .dropdown li.selected{
+        background:#FFF;
+        color:#000
+    }
+    .svg .dropdownButton:before{
+        content:url(../images/white-on-black/arrow-down.svg)
+    }
+}
+.dropdownButton:enabled{
+    cursor:pointer
+}
+.dropdownButton:disabled{
+    cursor:default
+}
+.discordContainer{
+    margin-top:0;
+    width:50%;
+    float:right;
+    text-align:right
+}
+.rtl .discordContainer{
+    float:left;
+    text-align:left
+}
+.discord{
+    position:relative;
+    top:-4px;
+    padding-left:6px;
+    font-size:14px;
+    line-height:18px
+}
+.discordIcon{
+    height:18px;
+    width:18px;
+    display:inline-block;
+    zoom:1
+}
+.svg .discordIcon:before{
+    /* content:url(../images/normal/Discord_Former_Icon_resized.png); */
+    height:18px;
+    width:18px
+}
+.unifiedLoginFooter{
+    margin-top:66px;
+    margin-left:20px;
+    margin-right:20px
+}
+.unifiedProblemsSigningIn{
+    font-size:14px;
+    line-height:18px;
+    width:50%;
+    float:left
+}
+.rtl .unifiedProblemsSigningIn{
+    float:right
+}
+.unifiedForm{
+    width:360px;
+    margin:-31px auto 0;
+    text-align:center;
+    padding:0
+}
+.unifiedUsername{
+    -webkit-user-select:text;
+    height:21px;
+    width:328px;
+    position:relative;
+    padding:14px 0 6px;
+    display:inline-block;
+    background:url(../images/normal/transparent.gif);
+    border-width:0;
+    border-bottom:1px solid #CCEFFC;
+    font-size:16px;
+    text-align:left;
+    margin:0
+}
+.rtl .unifiedUsername{
+    text-align:right
+}
+.unifiedUsername::-ms-clear{
+    display:none;
+    width:0;
+    height:0
+}
+.simulatedPlaceholder{
+    position:relative;
+    top:-27px;
+    height:20px;
+    margin-bottom:-20px;
+    letter-spacing:-.03em;
+    font-size:16px;
+    color:rgba(0,0,0,.6);
+    z-index:1;
+    text-align:left;
+    padding:0 16px
+}
+.rtl .simulatedPlaceholder{
+    text-align:right
+}
+.unifiedUsernameContainer .simulatedPlaceholder{
+    top:-17px
+}
+.logo{
+    position:absolute;
+    top:36px;
+    left:291px
+}
+.logo:before{
+    content:url(../images/normal/skype-logo.svg)
+}
+.svg .logo:before{
+    content:url(../images/normal/skype-logo.svg)
+}
+.pageTitleOrErrorMsgContainer{
+    height:86px;
+    padding:5px 0 20px;
+    width:500px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden
+}
+.unifiedLoginError,.unifiedLoginHeader{
+    height:15px;
+    padding:10px;
+    text-align:center
+}
+.unifiedLoginHeader{
+    font-size:34px;
+    line-height:34px
+}
+.subtitle{
+    display:block;
+    margin-top:8px;
+    width:100%;
+    font-size:15px;
+    line-height:18px
+}
+.message{
+    display:none;
+    margin:0 auto;
+    width:100%;
+    position:relative;
+    background:0 0;
+    text-align:center
+}
+.messageBody{
+    display:inline-block;
+    padding:0 0 0 20px;
+    line-height:20px;
+    font-size:13px;
+    background:url(../images/normal/error.png) left top no-repeat
+}
+.rtl .messageBody{
+    background:url(../images/normal/error.png) right top no-repeat;
+    padding-left:0
+}
+.svg .messageBody{
+    background:url(../images/normal/error.svg) left top no-repeat
+}
+@media (-ms-high-contrast:black-on-white){
+    .svg .logo:before{
+        content:url(../images/black-on-white/skype-logo.svg)
+    }
+    .svg .messageBody{
+        background:url(../images/black-on-white/error.svg) left top no-repeat
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    .svg .logo:before{
+        content:url(../images/white-on-black/skype-logo.svg)
+    }
+    .svg .messageBody{
+        background:url(../images/white-on-black/error.svg) left top no-repeat
+    }
+    .skype-button,.skype-button--secondary,.skype-button:disabled{
+        border-color:#FFF
+    }
+}
+.rtl .svg .messageBody{
+    background:url(../images/normal/error.svg) right top no-repeat;
+    padding-left:0
+}
+.pictureContainer{
+    width:48px;
+    height:48px;
+    position:absolute;
+    top:0;
+    left:0
+}
+.rtl .pictureContainer{
+    right:0;
+    left:auto
+}
+.suggestionText{
+    padding-top:5px;
+    padding-left:10px;
+    height:34px;
+    position:absolute;
+    top:0;
+    left:48px;
+    width:253px
+}
+.suggestionName,.suggestionUsername{
+    display:block;
+    white-space:nowrap;
+    width:100%;
+    overflow:hidden;
+    text-overflow:ellipsis
+}
+.rtl .suggestionText{
+    right:48px;
+    padding-left:0;
+    padding-right:10px
+}
+.suggestionItem{
+    height:48px;
+    margin:5px
+}
+.suggestionName{
+    font-size:13px;
+    line-height:16px;
+    font-weight:700;
+    color:#FFF
+}
+.suggestionUsername{
+    font-size:11px;
+    line-height:13px;
+    margin-top:5px
+}
+.suggestionPicture{
+    width:48px;
+    height:48px;
+    vertical-align:middle;
+    left:0
+}
+.suggestionsListItem{
+    margin-bottom:8px;
+    height:48px;
+    position:relative
+}
+.suggestionsList .last{
+    margin-bottom:0
+}
+.skype-button,.skype-button--secondary,.skype-button:disabled{
+    display:inline-block;
+    cursor:pointer;
+    color:#FFF;
+    font-size:100%;
+    line-height:.9333333333em;
+    text-align:center;
+    overflow:auto;
+    box-sizing:content-box;
+    padding:11px 19px 12px;
+    min-width:82px;
+    border-width:2px;
+    border-style:solid;
+    -webkit-border-radius:25px;
+    -moz-border-radius:25px;
+    -ms-border-radius:25px;
+    border-radius:25px
+}
+.login__button-bar .skype-button{
+    margin:0 auto
+}
+@media (-ms-high-contrast:black-on-white){
+    .skype-button,.skype-button--secondary,.skype-button:disabled{
+        border-color:#000
+    }
+}
+.skype-button{
+    background-color:#077DB4;
+    border-color:#077DB4
+}
+.skype-button:hover{
+    color:#CCEFFC;
+    background-color:#00719C;
+    border-color:#00719C
+}
+.skype-button--secondary,.skype-button:disabled{
+    background-color:#077DB4;
+    border-color:#077DB4
+}
+.skype-button:disabled{
+    cursor:default;
+    color:#CCEFFC
+}
+.skype-button--secondary:hover{
+    color:#CCEFFC;
+    background-color:#008CC0;
+    border-color:#008CC0
+}
+@-webkit-keyframes spinner-one-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.65,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.65,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-one-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.65,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.65,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-one-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    33.33%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,1,1);
+        animation-timing-function:cubic-bezier(.33,0,1,1)
+    }
+    52.38%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.8,0,.78,1);
+        animation-timing-function:cubic-bezier(.8,0,.78,1)
+    }
+    72.62%{
+        -webkit-transform:scale(1.15);
+        -ms-transform:scale(1.15);
+        -o-transform:scale(1.15);
+        transform:scale(1.15);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@keyframes spinner-one-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    33.33%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,1,1);
+        animation-timing-function:cubic-bezier(.33,0,1,1)
+    }
+    52.38%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.8,0,.78,1);
+        animation-timing-function:cubic-bezier(.8,0,.78,1)
+    }
+    72.62%{
+        -webkit-transform:scale(1.15);
+        -ms-transform:scale(1.15);
+        -o-transform:scale(1.15);
+        transform:scale(1.15);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@-webkit-keyframes spinner-two-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.76,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.76,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-two-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.76,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.76,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-two-scale{
+    0%{
+        -webkit-transform:scale(.96);
+        -ms-transform:scale(.96);
+        -o-transform:scale(.96);
+        transform:scale(.96);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    4.76%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    38.1%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    57.14%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    100%,72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8)
+    }
+}
+@keyframes spinner-two-scale{
+    0%{
+        -webkit-transform:scale(.96);
+        -ms-transform:scale(.96);
+        -o-transform:scale(.96);
+        transform:scale(.96);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    4.76%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    38.1%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    57.14%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    100%,72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8)
+    }
+}
+@-webkit-keyframes spinner-three-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.88,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.88,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-three-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.88,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.88,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-three-scale{
+    0%{
+        -webkit-transform:scale(.96);
+        -ms-transform:scale(.96);
+        -o-transform:scale(.96);
+        transform:scale(.96);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    9.52%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    42.86%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    61.9%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    100%,72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8)
+    }
+}
+@keyframes spinner-three-scale{
+    0%{
+        -webkit-transform:scale(.96);
+        -ms-transform:scale(.96);
+        -o-transform:scale(.96);
+        transform:scale(.96);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    9.52%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    42.86%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    61.9%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    100%,72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8)
+    }
+}
+@-webkit-keyframes spinner-four-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(1,.2,.25,.76);
+        animation-timing-function:cubic-bezier(1,.2,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-four-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(1,.2,.25,.76);
+        animation-timing-function:cubic-bezier(1,.2,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-four-scale{
+    0%{
+        -webkit-transform:scale(.96);
+        -ms-transform:scale(.96);
+        -o-transform:scale(.96);
+        transform:scale(.96);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    14.29%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    47.62%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    100%,66.67%,72.62%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+}
+@keyframes spinner-four-scale{
+    0%{
+        -webkit-transform:scale(.96);
+        -ms-transform:scale(.96);
+        -o-transform:scale(.96);
+        transform:scale(.96);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    14.29%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    47.62%{
+        -webkit-transform:scale(.35);
+        -ms-transform:scale(.35);
+        -o-transform:scale(.35);
+        transform:scale(.35);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    100%,66.67%,72.62%{
+        -webkit-transform:scale(.45);
+        -ms-transform:scale(.45);
+        -o-transform:scale(.45);
+        transform:scale(.45);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+}
+@-webkit-keyframes spinner-small-one-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.65,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.65,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-small-one-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.65,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.65,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-small-one-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    33.33%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,1,1);
+        animation-timing-function:cubic-bezier(.33,0,1,1)
+    }
+    52.38%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.8,0,.78,1);
+        animation-timing-function:cubic-bezier(.8,0,.78,1)
+    }
+    72.62%{
+        -webkit-transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        -o-transform:scale(1.1);
+        transform:scale(1.1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@keyframes spinner-small-one-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    33.33%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,1,1);
+        animation-timing-function:cubic-bezier(.33,0,1,1)
+    }
+    52.38%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.8,0,.78,1);
+        animation-timing-function:cubic-bezier(.8,0,.78,1)
+    }
+    72.62%{
+        -webkit-transform:scale(1.1);
+        -ms-transform:scale(1.1);
+        -o-transform:scale(1.1);
+        transform:scale(1.1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@-webkit-keyframes spinner-small-two-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.76,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.76,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-small-two-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.76,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.76,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-small-two-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+    4.76%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    38.1%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    57.14%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@keyframes spinner-small-two-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+    4.76%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    38.1%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    57.14%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@-webkit-keyframes spinner-small-three-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.88,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.88,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-small-three-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(.88,.21,.25,.76);
+        animation-timing-function:cubic-bezier(.88,.21,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-small-three-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+    9.52%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    42.86%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    61.9%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@keyframes spinner-small-three-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+    9.52%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    42.86%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    61.9%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    72.62%{
+        -webkit-transform:scale(.8);
+        -ms-transform:scale(.8);
+        -o-transform:scale(.8);
+        transform:scale(.8);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@-webkit-keyframes spinner-small-four-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(1,.2,.25,.76);
+        animation-timing-function:cubic-bezier(1,.2,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@keyframes spinner-small-four-rotate{
+    0%{
+        -webkit-transform:rotate(0);
+        -ms-transform:rotate(0);
+        -o-transform:rotate(0);
+        transform:rotate(0);
+        -webkit-animation-timing-function:cubic-bezier(1,.2,.25,.76);
+        animation-timing-function:cubic-bezier(1,.2,.25,.76)
+    }
+    100%{
+        -webkit-transform:rotate(360deg);
+        -ms-transform:rotate(360deg);
+        -o-transform:rotate(360deg);
+        transform:rotate(360deg)
+    }
+}
+@-webkit-keyframes spinner-small-four-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+    14.29%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    47.62%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    66.67%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    72.62%{
+        -webkit-transform:scale(.5);
+        -ms-transform:scale(.5);
+        -o-transform:scale(.5);
+        transform:scale(.5);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+@keyframes spinner-small-four-scale{
+    0%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+    14.29%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    47.62%{
+        -webkit-transform:scale(.6);
+        -ms-transform:scale(.6);
+        -o-transform:scale(.6);
+        transform:scale(.6);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    66.67%{
+        -webkit-transform:scale(.7);
+        -ms-transform:scale(.7);
+        -o-transform:scale(.7);
+        transform:scale(.7);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,.67,1);
+        animation-timing-function:cubic-bezier(.33,0,.67,1)
+    }
+    72.62%{
+        -webkit-transform:scale(.5);
+        -ms-transform:scale(.5);
+        -o-transform:scale(.5);
+        transform:scale(.5);
+        -webkit-animation-timing-function:cubic-bezier(.33,0,0,1);
+        animation-timing-function:cubic-bezier(.33,0,0,1)
+    }
+    100%{
+        -webkit-transform:scale(1);
+        -ms-transform:scale(1);
+        -o-transform:scale(1);
+        transform:scale(1)
+    }
+}
+.skypeSpinner .spinnerAnimation .circle{
+    height:16%;
+    left:42%;
+    top:42%;
+    width:16%;
+    position:absolute
+}
+.skypeSpinner .spinnerAnimation .circle div{
+    height:100%;
+    position:absolute;
+    width:100%
+}
+.skypeSpinner .spinnerAnimation .circle .position{
+    top:-250%
+}
+.skypeSpinner .spinnerAnimation .circle .shape{
+    background-color:#077DB4;
+    border-radius:50%;
+    overflow:hidden
+}
+@media (-ms-high-contrast:black-on-white){
+    .skypeSpinner .spinnerAnimation .circle .shape{
+        background-color:#000
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    .skypeSpinner .spinnerAnimation .circle .shape{
+        background-color:#FFF
+    }
+}
+.skypeSpinner .spinnerAnimation.small .circle{
+    height:24%;
+    left:38%;
+    top:38%;
+    width:24%
+}
+.skypeSpinner .spinnerAnimation.small .circle .position{
+    top:-150%
+}
+.skypeSpinner .spinnerAnimation.blue .circle .shape{
+    background-color:#077DB4
+}
+.skypeSpinner .spinnerAnimation.blue .circle .shape:after{
+    border-color:#077DB4
+}
+@media (-ms-high-contrast:black-on-white){
+    .skypeSpinner .spinnerAnimation.blue .circle .shape{
+        background-color:#000
+    }
+    .skypeSpinner .spinnerAnimation.blue .circle .shape:after{
+        border-color:#000
+    }
+}
+@media (-ms-high-contrast:white-on-black){
+    .skypeSpinner .spinnerAnimation.blue .circle .shape{
+        background-color:#FFF
+    }
+    .skypeSpinner .spinnerAnimation.blue .circle .shape:after{
+        border-color:#FFF
+    }
+}
+.skypeSpinner .spinnerAnimation .circle .rotate,.skypeSpinner .spinnerAnimation .circle .scale{
+    -webkit-animation-direction:normal;
+    animation-direction:normal;
+    -webkit-animation-duration:1.4s;
+    animation-duration:1.4s;
+    -webkit-animation-iteration-count:infinite;
+    animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    animation-timing-function:linear
+}
+.skypeSpinner .spinnerAnimation .circle.one .rotate{
+    -webkit-animation-name:spinner-one-rotate;
+    animation-name:spinner-one-rotate
+}
+.skypeSpinner .spinnerAnimation .circle.one .scale{
+    -webkit-animation-name:spinner-one-scale;
+    animation-name:spinner-one-scale
+}
+.skypeSpinner .spinnerAnimation .circle.two .rotate{
+    -webkit-animation-name:spinner-two-rotate;
+    animation-name:spinner-two-rotate
+}
+.skypeSpinner .spinnerAnimation .circle.two .scale{
+    -webkit-animation-name:spinner-two-scale;
+    animation-name:spinner-two-scale
+}
+.skypeSpinner .spinnerAnimation .circle.three .rotate{
+    -webkit-animation-name:spinner-three-rotate;
+    animation-name:spinner-three-rotate
+}
+.skypeSpinner .spinnerAnimation .circle.three .scale{
+    -webkit-animation-name:spinner-three-scale;
+    animation-name:spinner-three-scale
+}
+.skypeSpinner .spinnerAnimation .circle.four .rotate{
+    -webkit-animation-name:spinner-four-rotate;
+    animation-name:spinner-four-rotate
+}
+.skypeSpinner .spinnerAnimation .circle.four .scale{
+    -webkit-animation-name:spinner-four-scale;
+    animation-name:spinner-four-scale
+}
+.skypeSpinner .spinnerAnimation.small .circle.one .rotate{
+    -webkit-animation-name:spinner-small-one-rotate;
+    animation-name:spinner-small-one-rotate
+}
+.skypeSpinner .spinnerAnimation.small .circle.one .scale{
+    -webkit-animation-name:spinner-small-one-scale;
+    animation-name:spinner-small-one-scale
+}
+.skypeSpinner .spinnerAnimation.small .circle.two .rotate{
+    -webkit-animation-name:spinner-small-two-rotate;
+    animation-name:spinner-small-two-rotate
+}
+.skypeSpinner .spinnerAnimation.small .circle.two .scale{
+    -webkit-animation-name:spinner-small-two-scale;
+    animation-name:spinner-small-two-scale
+}
+.skypeSpinner .spinnerAnimation.small .circle.three .rotate{
+    -webkit-animation-name:spinner-small-three-rotate;
+    animation-name:spinner-small-three-rotate
+}
+.skypeSpinner .spinnerAnimation.small .circle.three .scale{
+    -webkit-animation-name:spinner-small-three-scale;
+    animation-name:spinner-small-three-scale
+}
+.skypeSpinner .spinnerAnimation.small .circle.four .rotate{
+    -webkit-animation-name:spinner-small-four-rotate;
+    animation-name:spinner-small-four-rotate
+}
+.skypeSpinner .spinnerAnimation.small .circle.four .scale{
+    -webkit-animation-name:spinner-small-four-scale;
+    animation-name:spinner-small-four-scale
+}
+.skypeSpinner{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:0 0
+}
+.skypeSpinner .spinnerAnimation{
+    margin:0 auto;
+    position:relative;
+    width:300px;
+    height:300px;
+    -webkit-transform:scale(.5);
+    -moz-transform:scale(.5);
+    -o-transform:scale(.5);
+    transform:scale(.5)
+}
+.lte-ie9 .skypeSpinner .spinnerAnimation .circle .shape{
+    background-color:#FFF
+}
+.lte-ie9 .skypeSpinner .spinnerAnimation .circle .shape:after{
+    border-color:#FFF
+}
+.login__button-bar{
+    padding-top:75px
+}
