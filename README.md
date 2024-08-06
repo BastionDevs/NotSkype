@@ -4,11 +4,11 @@ Current development goal: MSA verification.
 Join our [Discord server](https://discord.gg/FddVdVQKaX) now!  
 
 # Contributors
-![developers](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/devs.png)  
+![developers](https://raw.githubusercontent.com/BastionDevs/NotSkype/main/Images/devs.png)  
 [ChatGPT](https://chat.openai.com)  
   
 suvikplayzrb, for never failing to not miss his deadlines  
-![suvikplayzrb](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/svkdev.png)  
+![suvikplayzrb](https://raw.githubusercontent.com/BastionDevs/NotSkype/main/Images/svkdev.png)  
 
 # Credits
 [SkPy](https://github.com/Terrance/SkPy)  
