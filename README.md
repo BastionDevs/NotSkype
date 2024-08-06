@@ -1,11 +1,7 @@
 # Welcome to the NotSkype Project!
 NotSkype is a functional Skype Classic (5-7) _replica_.  
-Current development goal: Convert _SkPy_ to C#.  
+Current development goal: MSA verification.  
 Join our [Discord server](https://discord.gg/FddVdVQKaX) now!  
-
-## Notice on NotSkypeServer
-The NotSkype Server Software has been deprecated since NotSkype now connects to Microsoft servers.  
-You may still access the projects in the _Old_ folder.  
 
 # Contributors
 ![developers](https://raw.githubusercontent.com/ItsAndrewDev/NotSkype/main/Images/devs.png)  
