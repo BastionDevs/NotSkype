@@ -62,3 +62,5 @@ E:\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.CoreCompileInputs.cache
 E:\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.Up2Date
 E:\Git\NotSkype\NotSkype\obj\Debug\NotSkype.exe
 E:\Git\NotSkype\NotSkype\obj\Debug\NotSkype.pdb
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\bin\Debug\AE.Net.Mail.dll
+C:\Users\skalf\Desktop\Aedan\Git\NotSkype\NotSkype\obj\Debug\NotSkype.csproj.Up2Date
