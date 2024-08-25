@@ -168,6 +168,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "IMWindow";
             this.Text = "NotSkype - ";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.IMWindow_FormClosing);
             this.Load += new System.EventHandler(this.IMWindow_Load);
             this.panelChatMsgs.ResumeLayout(false);
             this.panelChatMsgs.PerformLayout();
