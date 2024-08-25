@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js"></script>
+    <title>Skype</title>
+</head>
+
+<body>
+    <!-- Unified Skype Login View -->
+    <div class="view noflip unifiedSkypeLoginView" id="unifiedSkypeLoginView" style="display: none">
+        <span class="logo"></span>
+        <div class="pageTitleOrErrorMsgContainer" id="pageTitleOrErrorMsgContainer">
+            <h1 id="unifiedLoginHeader" class="unifiedLoginHeader">Sign in <span class="subtitle">with Skype or Microsoft account</span></h1>
+            <div id="unifiedLoginError" class="unifiedLoginError" role="alert" aria-live="assertive" style="display: none;">
+                <div class="message" id="unifiedMessageErrorSkypeLogin" role="alert">
+                    <span class="messageBody"></span>
+                </div>
+            </div>
+        </div>
+        <form id="unifiedForm" class="unifiedForm" action="load.html">
+            <div id="unifiedUsernameContainer" class="unifiedUsernameContainer">
+                <input
+                    type="text"
+                    id="unifiedUsername"
+                    class="unifiedUsername"
+                    maxlength="150"
+                    role="textbox"
+                    aria-labelledby="usernameSimulatedPlaceholder"
+                    placeholder="Skype Name, email or phone"
+                />
+            </div>
+            <div class="login__button-bar">
+                <button
+                    id="unifiedSignIn"
+                    class="skype-button"
+                >Sign in</button>
+                <div class="newAccountContainer">
+                    <a href="#" id="unifiedDefaultCreateAccount">Create an account</a>
+                </div>
+            </div>
+        </form>
+        <div class="unifiedLoginFooter">
+            <a href="#" class="unifiedProblemsSigningIn">
+                Problems signing in?
+            </a>
+            <div class="discordContainer">
+                <div class="discordIcon"><img src="images/normal/discord_former_icon.png" style="width:18px; height:auto" /></div>
+                <a
+                    href="https://discord.gg/FddVdVQKaX"
+                    target="_blank"
+                    class="discord">
+                    Bastion Discord server
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading View -->
+    <div class="view loadingView" id="loadingView" style="display: block;">
+        <span class="logo"></span>
+        <div id="Spinner" class="skypeSpinner">
+            <div class="spinnerAnimation">
+                <!-- Spinner circles without JS control -->
+                <div class="circle one">
+                    <div class="rotate">
+                        <div class="position">
+                            <div class="scale">
+                                <div class="shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle two">
+                    <div class="rotate">
+                        <div class="position">
+                            <div class="scale">
+                                <div class="shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle three">
+                    <div class="rotate">
+                        <div class="position">
+                            <div class="scale">
+                                <div class="shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="circle four">
+                    <div class="rotate">
+                        <div class="position">
+                            <div class="scale">
+                                <div class="shape"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No JavaScript Notice -->
+    <noscript>
+        <span class="logo"></span>
+        <div class="contentCenter">
+            <img src="https://nojspixel.blob.core.windows.net/nojs.png" />
+            <p>JavaScript needs to be enabled in your browser to use Skype.</p>
+        </div>
+    </noscript>
+</body>
+</html>

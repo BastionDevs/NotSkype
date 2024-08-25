@@ -5,6 +5,7 @@ pause
 echo Deleting...
 rmdir NotSkype\.vs /s /q
 rmdir NotSkypeInstaller\.vs /s /q
+rmdir NotSkypePy\NotSkype\.vs /s /q
 echo.
 echo Done!
 pause
