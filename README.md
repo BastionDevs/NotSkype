@@ -1,3 +1,8 @@
+## Deprecation Notice
+This repository is no longer in use for the NotSkype project, as we have moved away from the custom C# client. For more information regarding the new NotSkype relaunch, please consult our Discord server.
+
+---
+
 # Welcome to the NotSkype Project!
 NotSkype is a functional Skype Classic (5-7) _replica_.  
 Current development goal: MSA verification.  
